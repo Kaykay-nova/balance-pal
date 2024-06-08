@@ -19,14 +19,20 @@ export function Footer() {
                   target="_blank"
                   className="footer__icon"
                 >
-                  <FontAwesomeIcon className="footer__icon" icon={faGithub} />
+                  <FontAwesomeIcon
+                    className="footer__icon"
+                    icon={faGithub}
+                  />
                 </Link>
                 <Link
                   href="https://linkedin.com/in/kristýna-konečná-590292290"
                   target="_blank"
                   className="footer__icon"
                 >
-                  <FontAwesomeIcon className="footer__icon" icon={faLinkedin} />
+                  <FontAwesomeIcon
+                    className="footer__icon"
+                    icon={faLinkedin}
+                  />
                 </Link>
               </div>
             </div>
@@ -34,10 +40,16 @@ export function Footer() {
               <p className="footer__social-name">Páťa</p>
               <div className="footer__social-icons">
                 <Link href="#" target="_blank" className="footer__icon">
-                <FontAwesomeIcon className="footer__icon" icon={faGithub} />
+                  <FontAwesomeIcon
+                    className="footer__icon"
+                    icon={faGithub}
+                  />
                 </Link>
                 <Link href="#" target="_blank" className="footer__icon">
-                <FontAwesomeIcon className="footer__icon" icon={faLinkedin} />
+                  <FontAwesomeIcon
+                    className="footer__icon"
+                    icon={faLinkedin}
+                  />
                 </Link>
               </div>
             </div>
