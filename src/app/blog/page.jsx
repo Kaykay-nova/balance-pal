@@ -24,69 +24,30 @@ export default async function Blog() {
           &dArr;
         </Link>
       </div>
-      <div className="blog-list">
-        <h2 id="scroll" className="blog__title">
-          Články
-        </h2>
-        <ul>
-          {posts.map((post) => (
-            <li className="blog-list__post" key={post.slug}>
-              <Link href={`/posts/${post.slug}`}>
-                <div className="blog-list__post">
-                  <span className="blog-list__post--cover"></span>
-                  <p className="blog-list__post--title">{post.data.title}</p>
-                  <span className="blog__arrow">&raquo;</span>
-                </div>
+      <h2 id="scroll" className="blog__title">
+        Články
+      </h2>
+
+      <ul className="blog-list">
+        {posts.map((post) => {
+          console.log(post.data.coverImage);
+          return (
+            <li className="blog-list__item" key={post.slug}>
+              <Link className="blog-list__post" href={`/posts/${post.slug}`}>
+                <span
+                  className="blog-list__post--cover"
+                  style={{
+                    backgroundImage: `url(${post.data.coverImage})`,
+                  }}
+                ></span>
+                <p className="blog-list__post--title">{post.data.title}</p>
+                <span className="blog__arrow">&raquo;</span>
               </Link>
             </li>
-          ))}
-        </ul>
-        {/* <div className="blog-list__post">
-          <span className="blog-list__post--cover"></span>
-          <p className="blog-list__post--title">
-            Jak se vyjádřit a stanovit si hranice, aniž byste ublížili ostatním.
-          </p>
-          <a className="blog__arrow" href="./post.html">
-            &raquo;
-          </a>
-        </div>
-        <div className="blog-list__post">
-          <span className="blog-list__post--cover"></span>
-          <p className="blog-list__post--title">
-            Jak se vyjádřit a stanovit si hranice, aniž byste ublížili ostatním.
-          </p>
-          <a className="blog__arrow" href="./post.html">
-            &raquo;
-          </a>
-        </div>
-        <div className="blog-list__post">
-          <span className="blog-list__post--cover"></span>
-          <p className="blog-list__post--title">
-            Jak se vyjádřit a stanovit si hranice, aniž byste ublížili ostatním.
-          </p>
-          <a className="blog__arrow" href="./post.html">
-            &raquo;
-          </a>
-        </div>
-        <div className="blog-list__post">
-          <span className="blog-list__post--cover"></span>
-          <p className="blog-list__post--title">
-            Jak se vyjádřit a stanovit si hranice, aniž byste ublížili ostatním.
-          </p>
-          <a className="blog__arrow" href="./post.html">
-            &raquo;
-          </a>
-        </div>
-        <div className="blog-list__post">
-          <span className="blog-list__post--cover"></span>
-          <p className="blog-list__post--title">
-            Jak se vyjádřit a stanovit si hranice, aniž byste ublížili ostatním.
-          </p>
-          <a className="blog__arrow" href="./post.html">
-            &raquo;
-          </a>
-        </div> */}
-      </div>
+          );
+        })}
+      </ul>
+
       <div className="pagination">
         <a href="#">&laquo;</a>
         <a href="#" className="pag-active">
