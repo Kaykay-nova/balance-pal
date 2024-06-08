@@ -18,5 +18,5 @@ export async function generateMetadata({ params }) {
 export default async function PostPage({ params }) {
   const post = getPostBySlug(params.slug);
   const mdxSource = await serialize(post.content, { scope: post.data });
-  return <Post source={mdxSource} />;
+  return <Post source={mdxSource} frontMatter={post.data} />;
 }
