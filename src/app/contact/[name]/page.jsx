@@ -1,11 +1,10 @@
-"use client"
+'use client';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
 
 const contacts = {
   kristyna: {
@@ -32,50 +31,57 @@ const ContactDetail = () => {
 
   return (
     <main>
-    <div class="contact__container">
-     <aside class="contact__aside--panel">
-       <Link href="/contact/kristyna" class="contact__person">
-         <div class="contact__person--card">
-           <img src="/img/prince-akachi-J1OScm_uHUQ-unsplash.jpg" alt="Foto Kristýna"/>
-           <h3>Kristýna</h3>
-         </div>
-       </Link>
-       <Link href="/contact/patricie" class="contact__person">
-         <div class="contact__person--card paty">
-           <h3 class="contact__paty">Páťa</h3>
-           <img src="/img/prince-akachi-J1OScm_uHUQ-unsplash.jpg" alt="Foto Páťa"/>
-         </div>
-       </Link>
-     </aside>
-     <div class="contact__main-content">
-       <div class="contact__btn">
-         <Link class="btn" href="/contact">&laquo; Zpět</Link> 
-         <Link href={contact.link} class="btn">Druhá autorka &raquo;</Link>
-       </div>
-       <div class="contact__header">
-         <h1>{contact.title}</h1>
-         <div class="contact__social">
-             <div class="footer__social-icons">
-                 <Link href="mailto:#" target="_blank" class="footer__icon"><FontAwesomeIcon
-                 className="footer__icon"
-                 icon={faEnvelope}
-               /></Link>
-                 <Link href="#" target="_blank" class="footer__icon"><FontAwesomeIcon
-                 className="footer__icon"
-                 icon={faGithub}
-               /></Link>
-                 <Link href="#" target="_blank" class="footer__icon"><FontAwesomeIcon
-                 className="footer__icon"
-                 icon={faLinkedin}
-               /></Link>
-             </div>
-         </div>
-       </div>
-       <p>{contact.description}</p>
-     </div>
-    </div>
- </main>
+      <div className="contact__container">
+        <aside className="contact__aside--panel">
+          <Link href="/contact/kristyna" className="contact__person">
+            <div className="contact__person--card">
+              <img
+                src="/img/prince-akachi-J1OScm_uHUQ-unsplash.jpg"
+                alt="Foto Kristýna"
+              />
+              <h3>Kristýna</h3>
+            </div>
+          </Link>
+          <Link href="/contact/patricie" className="contact__person">
+            <div className="contact__person--card paty">
+              <h3 className="contact__paty">Páťa</h3>
+              <img
+                src="/img/prince-akachi-J1OScm_uHUQ-unsplash.jpg"
+                alt="Foto Páťa"
+              />
+            </div>
+          </Link>
+        </aside>
+        <div className="contact__main-content">
+          <div className="contact__btn">
+            <Link className="btn" href="/contact">
+              &laquo; Zpět
+            </Link>
+            <Link href={contact.link} className="btn">
+              Druhá autorka &raquo;
+            </Link>
+          </div>
+          <div className="contact__header">
+            <h1>{contact.title}</h1>
+            <div className="contact__social">
+              <div className="footer__social-icons">
+                <Link href="mailto:#" target="_blank" className="footer__icon">
+                  <FontAwesomeIcon className="footer__icon" icon={faEnvelope} />
+                </Link>
+                <Link href="#" target="_blank" className="footer__icon">
+                  <FontAwesomeIcon className="footer__icon" icon={faGithub} />
+                </Link>
+                <Link href="#" target="_blank" className="footer__icon">
+                  <FontAwesomeIcon className="footer__icon" icon={faLinkedin} />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <p>{contact.description}</p>
+        </div>
+      </div>
+    </main>
   );
-}
+};
 
 export default ContactDetail;

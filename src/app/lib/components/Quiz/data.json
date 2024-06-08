@@ -1,0 +1,232 @@
+[
+  {
+     "title":"Jak dlouho denně pracujete?",
+     "options":[
+        {
+           "text":"Méně než 8 hodin",
+           "category":"happy"
+        },
+        {
+           "text":"8-10 hodin",
+           "category":"balance"
+        },
+        {
+           "text":"10-12 hodin",
+           "category":"workaholic"
+        },
+        {
+           "text":"Více než 12 hodin",
+           "category":"burnout"
+        }
+     ]
+  },
+  {
+     "title":"Jak často si berete volno?",
+     "options":[
+        {
+           "text":"Méně než jednou za rok",
+           "category":"burnout"
+        },
+        {
+           "text":"Jednou za několik měsíců",
+           "category":"workaholic"
+        },
+        {
+           "text":"Minimálně dvě sezónní dovolené",
+           "category":"balance"
+        },
+        {
+           "text":"Pravidelně každý měsíc",
+           "category":"happy"
+        }
+     ]
+  },
+  {
+     "title":"Jak často se cítíte vypětí nebo stresování kvůli práci?",
+     "options":[
+        {
+           "text":"Nikdy",
+           "category":"happy"
+        },
+        {
+           "text":"Zřídka",
+           "category":"balance"
+        },
+        {
+           "text":"Často",
+           "category":"workaholic"
+        },
+        {
+           "text":"Velmi často",
+           "category":"burnout"
+        }
+     ]
+  },
+  {
+     "title":"Jaký je váš postoj k práci mimo pracovní dobu (např. odpovídání na e-maily)?",
+     "options":[
+        {
+           "text":"Neodpovídám na pracovní e-maily mimo pracovní dobu",
+           "category":"happy"
+        },
+        {
+           "text":"Odpovídám jen na naléhavé záležitosti",
+           "category":"balance"
+        },
+        {
+           "text":"Odpovídám na všechny e-maily bez ohledu na čas",
+           "category":"burnout"
+        },
+        {
+           "text":"Nemám problém pracovat i mimo pracovní dobu",
+           "category":"workaholic"
+        }
+     ]
+  },
+  {
+     "title":"Jak hodnotíte svou schopnost oddělit pracovní život od osobního?",
+     "options":[
+        {
+           "text":"Velmi špatně",
+           "category":"burnout"
+        },
+        {
+           "text":"Spíše špatně",
+           "category":"burnout"
+        },
+        {
+           "text":"Neutrálně",
+           "category":"workaholic"
+        },
+        {
+           "text":"Spíše dobře",
+           "category":"balance"
+        },
+        {
+           "text":"Velmi dobře",
+           "category":"happy"
+        }
+     ]
+  },
+  {
+     "title":"Máte pocit, že máte dostatek času na relaxaci a regeneraci mimo práci?",
+     "options":[
+        {
+           "text":"Ano, často",
+           "category":"happy"
+        },
+        {
+           "text":"Většinou ano",
+           "category":"balance"
+        },
+        {
+           "text":"Téměř vůbec",
+           "category":"workaholic"
+        },
+        {
+           "text":"Nikdy",
+           "category":"burnout"
+        }
+     ]
+  },
+  {
+     "title":"Jaký je váš oblíbený způsob relaxace?",
+     "options":[
+        {
+           "text":"Čtení knih, případně meditace",
+           "category":"happy"
+        },
+        {
+           "text":"Cvičení nebo jiný sport či pohyb",
+           "category":"happy"
+        },
+        {
+           "text":"Trávení času s rodinou nebo přáteli",
+           "category":"balance"
+        },
+        {
+           "text":"Sledování televize",
+           "category":"workaholic"
+        },
+        {
+           "text":"Konzumace alkoholu nebo jiných návykových látek 🙁",
+           "category":"burnout"
+        }
+     ]
+  },
+  {
+     "title":"Jak často komunikujete s rodinou a přáteli?",
+     "options":[
+        {
+           "text":"Denně",
+           "category":"happy"
+        },
+        {
+           "text":"Několikrát týdně",
+           "category":"happy"
+        },
+        {
+           "text":"Několikrát měsíčně",
+           "category":"balance"
+        },
+        {
+           "text":"Jednou nebo méně než 5x měsíčně",
+           "category":"workaholic"
+        },
+        {
+           "text":"Téměř vůbec, v poslední době se izoluju",
+           "category":"burnout"
+        }
+     ]
+  },
+  {
+     "title":"Jaké opatření vaše organizace podniká pro podporu work-life balance zaměstnanců?",
+     "options":[
+        {
+           "text":"Flexibilní pracovní doba",
+           "category":"happy"
+        },
+        {
+           "text":"Práce z domova",
+           "category":"workaholic"
+        },
+        {
+           "text":"Zkrácený pracovní týden",
+           "category":"happy"
+        },
+        {
+           "text":"Podpora zdraví a wellness",
+           "category":"balance"
+        },
+        {
+           "text":"Žádná opatření",
+           "category":"burnout"
+        }
+     ]
+  },
+  {
+     "title":"Máte možnost flexibilní pracovní doby nebo práce z domova?",
+     "options":[
+        {
+           "text":"Pracuji remote",
+           "category":"happy"
+        },
+        {
+           "text":"Mám flexibilní pracovní dobu",
+           "category":"happy"
+        },
+        {
+           "text":"Mám omezenou možnost (většinou 1-2 dny HO týdně)",
+           "category":"balance"
+        },
+        {
+           "text":"Spíše nemohu",
+           "category":"workaholic"
+        },
+        {
+           "text":"Nemám možnost",
+           "category":"burnout"
+        }
+     ]
+  }
+]

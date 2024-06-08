@@ -1,9 +1,11 @@
 'use client';
 import './style.css';
+import { Quiz } from '@/app/lib/components/Quiz'
 import lottie from 'lottie-web';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
+  const [selected, setSelected] = useState(null);
   const animationContainerMain = useRef(null);
 
   useEffect(() => {
@@ -88,8 +90,13 @@ export default function Home() {
             </p>
           </div>
           <p className="quiz__ready">Jste připraveni pustit se do toho?</p>
-          <button className="quiz__btn">Spustit kvíz</button>
+          
+          <button href="#scroll" className="quiz__btn" onClick={() => setSelected(<Quiz/>)}> 
+          Spustit kvíz</button>
+
         </section>
+
+        {selected}
       </main>
   );
 }
