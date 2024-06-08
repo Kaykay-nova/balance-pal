@@ -58,13 +58,13 @@ export function Footer() {
         <div className="footer__nav-photo">
           <Link
             className="footer__photo footer__photo--quiz"
-            href="./index.html#quiz"
+            href="/"
           >
             Kvíz
           </Link>
           <Link
             className="footer__photo footer__photo--blog"
-            href="./blog.html"
+            href="/blog"
           >
             Tipy
           </Link>
