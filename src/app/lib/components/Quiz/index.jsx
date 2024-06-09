@@ -81,9 +81,10 @@ export const Quiz = ({ onQuit }) => {
               <h2 className='quiz__title'>{questions[questionNumber - 1].title}</h2>
               <div className='quiz__questions'>
                 {questions[questionNumber - 1].options.map((option, index) => (
-                  <label key={index} className='quiz__question'>
-                    <input 
-                      type='radio' 
+                  <label key={index} className={selectedOption === option ? 'quiz__question selected__btn' : 'quiz__question'}
+                  >
+                    <input
+                      type={selectedOption === option ? 'hidden' : 'radio'} 
                       name='quiz_option'
                       checked={selectedOption === option}
                       onChange={() => handleChoice(option)}
