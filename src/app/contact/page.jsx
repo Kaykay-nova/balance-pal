@@ -19,7 +19,7 @@ export default function Contact() {
             <div className="contact__person--card paty">
               <h3 className="contact__paty">Páťa</h3>
               <img
-                src="/img/prince-akachi-J1OScm_uHUQ-unsplash.jpg"
+                src="/img/patricie-vyhlidalova.jpg"
                 alt="Foto Páťa"
               />
             </div>
