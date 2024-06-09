@@ -1,11 +1,9 @@
 'use client';
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 import questions from "./data.json" with { type: "json" };
 import { QuizResult } from '../QuizResult';
 
-
-
-export const Quiz = ({ onQuit, posts }) => {
+export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
   const [answers, setAnswers] = useState([]);
@@ -53,7 +51,7 @@ export const Quiz = ({ onQuit, posts }) => {
     <main>
       <div className="quiz__container">
 
-        <form className='quiz__form'>
+        <form ref={ref} className='quiz__form'>
           <div className="quiz__header">
           <div className="quiz__progressbar">
           {!quizEnded ? 
@@ -131,4 +129,4 @@ export const Quiz = ({ onQuit, posts }) => {
       </div>
     </main>
   );
-};
+});

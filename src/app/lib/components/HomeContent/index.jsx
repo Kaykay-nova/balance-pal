@@ -7,6 +7,9 @@ import { useEffect, useRef, useState } from 'react';
 export default function HomeContent({posts}) {
   const [quizActive, setQuizActive] = useState(false);
   const animationContainerMain = useRef(null);
+  const quizFirst = useRef(null);
+  const animationPeople = useRef(null);
+  const animationQuiz = useRef(null);
 
   useEffect(() => {
     const mainInstance = lottie.loadAnimation({
@@ -19,8 +22,7 @@ export default function HomeContent({posts}) {
     return () => mainInstance.destroy();
   }, []);
 
-  const animationPeople = useRef(null);
-
+  
   useEffect(() => {
     const peopleInstance = lottie.loadAnimation({
       container: animationPeople.current,
@@ -32,8 +34,7 @@ export default function HomeContent({posts}) {
     return () => peopleInstance.destroy();
   }, []);
 
-  const animationQuiz = useRef(null);
-
+  
   useEffect(() => {
     const quizInstance = lottie.loadAnimation({
       container: animationQuiz.current,
@@ -44,6 +45,13 @@ export default function HomeContent({posts}) {
     });
     return () => quizInstance.destroy();
   }, []);
+
+  
+  useEffect(() => {
+    if (quizActive) {
+      quizFirst.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [quizActive]);
 
   const startQuiz = () => {
     setQuizActive(true);
@@ -104,7 +112,7 @@ export default function HomeContent({posts}) {
 
       </section>
 
-      {quizActive && <Quiz onQuit={quitQuiz} posts={posts} />}
+      {quizActive && <Quiz ref={quizFirst} onQuit={quitQuiz} posts={posts} />}
     </main>
   );
 }

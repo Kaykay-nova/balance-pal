@@ -17,8 +17,6 @@ export const BlogContent = ({
     }
   }, [page]);
 
-  console.log(posts);
-
   return (
     <main>
       <div className="main__blog">
