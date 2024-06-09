@@ -75,7 +75,7 @@ export const Quiz = ({ onQuit }) => {
             <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Ukončit</button> 
             : <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Zavřít</button>}
           </div>
-          
+
           {!quizEnded ? (
             <div className='quiz__body'>
               <h2 className='quiz__title'>{questions[questionNumber - 1].title}</h2>
@@ -97,9 +97,9 @@ export const Quiz = ({ onQuit }) => {
             <div className='quiz__body'>
               <h2 className='quiz__title'>Váš výsledek</h2>
               <p className='quiz__result'>{resultTexts[calculateResult()]}</p>
-              <div className='quiz__buttons'>
-                <button type="button" onClick={handleRestart} className="quiz__btn">Opakovat kvíz</button>
-                <Link href="/blog" className="quiz__btn">Všechny články</Link>
+              <div className='quiz__result-btn'>
+                <button type="button" onClick={handleRestart} className="post__buttons--btn result-btn">Opakovat kvíz</button>
+                <Link href="/blog" className="post__buttons--btn result-btn">Všechny články</Link>
               </div>
             </div>
           )}

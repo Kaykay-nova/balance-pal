@@ -81,6 +81,7 @@ p {
   font-size: 2rem;
   font-weight: 800;
   color: white;
+  text-decoration: none;
 }
 
 .hero {
@@ -210,6 +211,7 @@ p {
 .quiz__cancel-btn {
   text-decoration: none;
   border: none;
+  font-size: 0.8rem;
   background-color: #ffffff;
   box-shadow: -3px 10px 20px #babecc, -10px 10px 20px #ffffff;
   padding: 1rem 2rem;
@@ -232,6 +234,25 @@ p {
 .quiz__question{
   margin: 1rem;
   font-weight: 500;
+}
+
+.quiz__result-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quiz__title{
+  color: #2a2823;
+  padding: 2rem 1rem;
+}
+
+.quiz__result{
+  padding: 2rem 1rem 4rem;
+  text-align: justify;
+}
+
+.result-btn:hover {
+  box-shadow: 0 0 10px 5px #229c7f!important;
 }
 
 .footer {
@@ -559,6 +580,7 @@ li {
 .post__buttons--btn {
   text-decoration: none;
   border: none;
+  font-size: 0.8rem;
   background-color: #ffffff;
   box-shadow: -3px 10px 20px #babecc, -10px 10px 20px #ffffff;
   padding: 1rem 2rem;
