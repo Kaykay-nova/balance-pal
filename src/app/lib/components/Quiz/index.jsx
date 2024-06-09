@@ -13,7 +13,7 @@ const resultTexts = {
 
 
 export const Quiz = ({ onQuit }) => {
-  const [questionNumber, setQuestionNumber] = useState(0);
+  const [questionNumber, setQuestionNumber] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [quizEnded, setQuizEnded] = useState(false);
@@ -26,7 +26,7 @@ export const Quiz = ({ onQuit }) => {
     if (selectedOption) {
       setAnswers([...answers, selectedOption.category]);
     }
-    if (questionNumber + 1 === questions.length) {
+    if (questionNumber === questions.length) {
       setQuizEnded(true);
     } else {
       setQuestionNumber(questionNumber + 1);
@@ -48,7 +48,7 @@ export const Quiz = ({ onQuit }) => {
   };
 
   const handleRestart = () => {
-    setQuestionNumber(0);
+    setQuestionNumber(1);
     setSelectedOption(null);
     setAnswers([]);
     setQuizEnded(false);
@@ -68,15 +68,19 @@ export const Quiz = ({ onQuit }) => {
       <div className="quiz__container">
         <form className='quiz__form'>
           <div id="scroll" className="quiz__header">
-            <div className="quiz__counter">{questionNumber + 1}/{questions.length}</div>
-            <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Ukončit</button>
+            {!quizEnded ? 
+            <div className="quiz__counter">{questionNumber}/{questions.length}</div> 
+            : <div/>}
+            {!quizEnded ? 
+            <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Ukončit</button> 
+            : <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Zavřít</button>}
           </div>
-
+          
           {!quizEnded ? (
             <div className='quiz__body'>
-              <h2 className='quiz__title'>{questions[questionNumber].title}</h2>
+              <h2 className='quiz__title'>{questions[questionNumber - 1].title}</h2>
               <div className='quiz__questions'>
-                {questions[questionNumber].options.map((option, index) => (
+                {questions[questionNumber - 1].options.map((option, index) => (
                   <label key={index} className='quiz__question'>
                     <input 
                       type='radio' 
@@ -91,25 +95,27 @@ export const Quiz = ({ onQuit }) => {
             </div>
           ) : (
             <div className='quiz__body'>
-              <h2 className='quiz__title'>Výsledek</h2>
+              <h2 className='quiz__title'>Váš výsledek</h2>
               <p className='quiz__result'>{resultTexts[calculateResult()]}</p>
               <div className='quiz__buttons'>
                 <button type="button" onClick={handleRestart} className="quiz__btn">Opakovat kvíz</button>
-                <Link href="/blog" className="quiz__btn">Přejít na blog</Link>
+                <Link href="/blog" className="quiz__btn">Všechny články</Link>
               </div>
             </div>
           )}
 
           {!quizEnded && (
             <div className="post__buttons">
-              <button 
+              {questionNumber !== 1 ? <button 
                 type="button" 
                 className="post__buttons--btn" 
-                onClick={questionNumber === 0 ? null : handlePrevious} 
+                onClick={handlePrevious} 
+
               >
                 &laquo; Předchozí
-              </button>
-              {questionNumber + 1 === questions.length ? (
+              </button> : <div/>}
+              
+              {questionNumber === questions.length ? (
                 <button 
                   type="button" 
                   className="post__buttons--btn" 

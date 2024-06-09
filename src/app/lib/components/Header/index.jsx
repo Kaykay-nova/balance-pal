@@ -4,7 +4,9 @@ import '../../../style.css';
 export function Header() {
   return (
     <header className="header">
-      <div className="header__logo">BalancePal</div>
+      <div><Link className="header__logo" href="/">
+      BalancePal
+        </Link></div>
       <nav className="header__nav">
         <Link className="header__link header__link--active" href="/">
           Domů
