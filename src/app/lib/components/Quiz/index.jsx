@@ -94,16 +94,6 @@ export const Quiz = ({ onQuit, posts }) => {
           ) : (
 
             <QuizResult posts={posts} onRestart={handleRestart} answers={answers}/>
-            // <div className='quiz__body'>
-            //   <h2 className='quiz__title'>Váš výsledek</h2>
-            //   <p className='quiz__result'>{resultTexts[calculateResult()].text} {resultTexts[calculateResult()].references.map((refer)=>{
-            //     <Link href={`/posts/${}`} className="post__buttons--btn result-btn">{refer}</Link>
-            //   })}</p>
-            //   <div className='quiz__result-btn'>
-            //     <button type="button" onClick={handleRestart} className="post__buttons--btn result-btn">Opakovat kvíz</button>
-            //     <Link href="/blog" className="post__buttons--btn result-btn">Všechny články</Link>
-            //   </div>
-            // </div>
           )}
 
           {!quizEnded && (
