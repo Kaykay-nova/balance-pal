@@ -18,9 +18,14 @@ export function getPostBySlug(slug) {
   return { data, content, slug: realSlug };
 }
 
-export async function getAllPosts() {
+export async function getAllPosts(page = 1, limit = 5) {
   const slugs = getPostSlugs();
-  const posts = slugs.map((slug) => getPostBySlug(slug));
+  const totalPosts = slugs.length;
+  const start = (page - 1) * limit;
+  const end = page * limit;
+  const paginatedSlugs = slugs.slice(start, end);
+
+  const posts = paginatedSlugs.map((slug) => getPostBySlug(slug));
 
   const mdxPosts = await Promise.all(
     posts.map(async (post) => {
@@ -32,5 +37,5 @@ export async function getAllPosts() {
     }),
   );
 
-  return mdxPosts;
+  return { posts: mdxPosts, totalPosts };
 }
