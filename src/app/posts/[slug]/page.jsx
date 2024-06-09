@@ -1,4 +1,4 @@
-import { getPostBySlug, getPostSlugs } from '@/app/lib/posts';
+import { getAllPosts, getPostBySlug, getPostSlugs } from '@/app/lib/posts';
 import Post from '@/app/lib/components/Post';
 import { serialize } from 'next-mdx-remote/serialize';
 
@@ -17,6 +17,7 @@ export async function generateMetadata({ params }) {
 // Komponenta pro zobrazení příspěvku
 export default async function PostPage({ params }) {
   const post = getPostBySlug(params.slug);
+  const { posts } = await getAllPosts();
   const mdxSource = await serialize(post.content, { scope: post.data });
-  return <Post source={mdxSource} frontMatter={post.data} />;
+  return <Post posts={posts} source={mdxSource} frontMatter={post.data} />;
 }
