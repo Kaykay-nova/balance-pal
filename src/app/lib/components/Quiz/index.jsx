@@ -1,17 +1,11 @@
 'use client';
 import { useState } from 'react';
 import questions from "./data.json" with { type: "json" };
-import resultTexts from "./results.json" with { type: "json" };
-import Link from 'next/link';
+import { QuizResult } from '../QuizResult';
 
-// const resultTexts = {
-//   happy: "Jste šťastný člověk! Zřejmě máte velmi dobrý balanc mezi prací a osobním životem.",
-//   balance: "Máte dobrou rovnováhu mezi prací a osobním životem, jen tak dál!",
-//   workaholic: "Jste workoholik! Možná byste měli věnovat více času odpočinku a relaxaci.",
-//   burnout: "Jste na pokraji vyhoření! Je důležité udělat si čas na sebe a odpočinout si.",
-// };
 
-export const Quiz = ({ onQuit }) => {
+
+export const Quiz = ({ onQuit, posts }) => {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
   const [answers, setAnswers] = useState([]);
@@ -53,15 +47,7 @@ export const Quiz = ({ onQuit }) => {
     setQuizEnded(false);
   };
 
-  const calculateResult = () => {
-    const categories = ['happy', 'balance', 'workaholic', 'burnout'];
-    const counts = categories.map(category => answers.filter(answer => answer === category).length);
-    const maxCount = Math.max(...counts);
-    const mostChoosenCategory = categories[counts.indexOf(maxCount)];
-
-    return mostChoosenCategory;
-  };
-      console.log(resultTexts[calculateResult().text])
+  
 
   return (
     <main>
@@ -106,14 +92,18 @@ export const Quiz = ({ onQuit }) => {
               </div>
             </div>
           ) : (
-            <div className='quiz__body'>
-              <h2 className='quiz__title'>Váš výsledek</h2>
-              <p className='quiz__result'>{resultTexts[calculateResult()].text}</p>
-              <div className='quiz__result-btn'>
-                <button type="button" onClick={handleRestart} className="post__buttons--btn result-btn">Opakovat kvíz</button>
-                <Link href="/blog" className="post__buttons--btn result-btn">Všechny články</Link>
-              </div>
-            </div>
+
+            <QuizResult posts={posts} onRestart={handleRestart} answers={answers}/>
+            // <div className='quiz__body'>
+            //   <h2 className='quiz__title'>Váš výsledek</h2>
+            //   <p className='quiz__result'>{resultTexts[calculateResult()].text} {resultTexts[calculateResult()].references.map((refer)=>{
+            //     <Link href={`/posts/${}`} className="post__buttons--btn result-btn">{refer}</Link>
+            //   })}</p>
+            //   <div className='quiz__result-btn'>
+            //     <button type="button" onClick={handleRestart} className="post__buttons--btn result-btn">Opakovat kvíz</button>
+            //     <Link href="/blog" className="post__buttons--btn result-btn">Všechny články</Link>
+            //   </div>
+            // </div>
           )}
 
           {!quizEnded && (
