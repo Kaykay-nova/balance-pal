@@ -13,14 +13,24 @@ export const QuizResult = ({onRestart, answers, posts}) => {
     return mostChoosenCategory;
   };
 
+  const result = resultTexts[calculateResult()];
+  const resultPosts = posts.filter((post) => {
+    return result.references.includes(post.slug)
+  })
+
   return (
   
   <div className='quiz__body'>
     <h2 className='quiz__title'>Váš výsledek</h2>
-      <p className='quiz__result'>{resultTexts[calculateResult()].text} {resultTexts[calculateResult()].references.map((refer)=>{
-        <Link href={`/posts/${''}`} className="post__buttons--btn result-btn">{refer}</Link>
-        })}
+      <p className='quiz__result'>{result.text} 
     </p>
+    <ul>
+      {resultPosts.map((p)=> {
+       return( <li>
+          <Link href={`/posts/${p.slug}`}>{p.data.title}</Link>
+          </li>)
+      })}
+    </ul>
     <div className='quiz__result-btn'>
       <button type="button" onClick={() => onRestart()} className="post__buttons--btn result-btn">Opakovat kvíz</button>
       <Link href="/blog" className="post__buttons--btn result-btn">Všechny články</Link>
