@@ -1,9 +1,14 @@
 'use client';
 import { useRef, useEffect } from 'react';
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
 
-export const BlogContent = ({ posts, totalPages, page, pageNumber }) => {
+export const BlogContent = ({
+  paginatedPosts,
+  posts,
+  totalPages,
+  page,
+  pageNumber,
+}) => {
   const lastHash = useRef();
 
   useEffect(() => {
@@ -11,6 +16,8 @@ export const BlogContent = ({ posts, totalPages, page, pageNumber }) => {
       lastHash.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [page]);
+
+  console.log(posts);
 
   return (
     <main>
@@ -36,8 +43,7 @@ export const BlogContent = ({ posts, totalPages, page, pageNumber }) => {
       </h2>
 
       <ul className="blog-list">
-        {posts.map((post) => {
-          console.log(post.data.coverImage);
+        {paginatedPosts.map((post) => {
           return (
             <li className="blog-list__item" key={post.slug}>
               <Link className="blog-list__post" href={`/posts/${post.slug}`}>
@@ -68,7 +74,7 @@ export const BlogContent = ({ posts, totalPages, page, pageNumber }) => {
             {index + 1}
           </Link>
         ))}
-        {posts.length === 5 && (
+        {paginatedPosts.length === 5 && (
           <Link href={`?page=${pageNumber + 1}`}>&raquo;</Link>
         )}
       </div>

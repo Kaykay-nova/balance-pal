@@ -25,10 +25,11 @@ export async function getAllPosts(page = 1, limit = 5) {
   const end = page * limit;
   const paginatedSlugs = slugs.slice(start, end);
 
-  const posts = paginatedSlugs.map((slug) => getPostBySlug(slug));
+  const paginatedPosts = paginatedSlugs.map((slug) => getPostBySlug(slug));
+  const posts = slugs.map((slug) => getPostBySlug(slug));
 
   const mdxPosts = await Promise.all(
-    posts.map(async (post) => {
+    paginatedPosts.map(async (post) => {
       const mdxSource = await serialize(post.content, { scope: post.data });
       return {
         ...post,
@@ -37,5 +38,5 @@ export async function getAllPosts(page = 1, limit = 5) {
     }),
   );
 
-  return { posts: mdxPosts, totalPosts };
+  return { paginatedPosts: mdxPosts, totalPosts, posts };
 }
