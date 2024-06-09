@@ -3,14 +3,12 @@ import { useState } from 'react';
 import questions from "./data.json" with { type: "json" };
 import Link from 'next/link';
 
-
 const resultTexts = {
   happy: "Jste šťastný člověk! Zřejmě máte velmi dobrý balanc mezi prací a osobním životem.",
   balance: "Máte dobrou rovnováhu mezi prací a osobním životem, jen tak dál!",
   workaholic: "Jste workoholik! Možná byste měli věnovat více času odpočinku a relaxaci.",
   burnout: "Jste na pokraji vyhoření! Je důležité udělat si čas na sebe a odpočinout si.",
 };
-
 
 export const Quiz = ({ onQuit }) => {
   const [questionNumber, setQuestionNumber] = useState(1);
@@ -66,11 +64,22 @@ export const Quiz = ({ onQuit }) => {
   return (
     <main>
       <div className="quiz__container">
+
         <form className='quiz__form'>
-          <div id="scroll" className="quiz__header">
-            {!quizEnded ? 
-            <div className="quiz__counter">{questionNumber}/{questions.length}</div> 
+          <div className="quiz__header">
+          <div className="quiz__progressbar">
+          {!quizEnded ? 
+            <div className="quiz__counter">{questionNumber}/{questions.length}</div>  
             : <div/>}
+
+            {!quizEnded ? 
+            <div id="progress-bar">
+              <div id="bar" style={{ width: `${(questionNumber / questions.length) * 100}%` }}>
+              </div>
+            </div> 
+            : <div/>}
+          </div>
+            
             {!quizEnded ? 
             <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Ukončit</button> 
             : <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Zavřít</button>}
@@ -111,7 +120,6 @@ export const Quiz = ({ onQuit }) => {
                 type="button" 
                 className="post__buttons--btn" 
                 onClick={handlePrevious} 
-
               >
                 &laquo; Předchozí
               </button> : <div/>}
@@ -141,4 +149,4 @@ export const Quiz = ({ onQuit }) => {
       </div>
     </main>
   );
-}
+};
