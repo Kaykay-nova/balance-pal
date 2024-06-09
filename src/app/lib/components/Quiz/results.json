@@ -1,0 +1,49 @@
+ 
+{
+  "happy":
+    {
+    "text": "Gratulujeme, jste nejspíš šťastný človek! Zřejmě máte nastavený velmi dobrý balanc mezi prací a osobním životem. Udržení spokojenosti ale není jen tak. Jestli si chcete přečíst nějaké tipy, podívejte se na námi vybrané články níže.",
+    "references": 
+      [
+        "jak-udrzet-svou-spokojenost-v-dlouhodobem-horizontu",
+        "techniky-pro-prohloubeni-zivotni-spokojenosti",
+        "vyznam-vdecnosti-a-jak-ji-integrovat-do-kazdodenniho-zivota",
+        "jak-si-udrzet-pozitivni-mysleni-i-v-narocnem-obdobi"
+      ] 
+    },
+  "balance":
+    {
+    "text": " Máte nastavenou dobrou rovnováhu mezi prací a osobním životem. Pokud byste to však chtěli mít ještě lépe nastavené, připravili jsme si pro vás články, které vám pomohou nastavit ty správné hranice. Podívejte se na ně níže!",
+    "references": 
+      [
+        "jak-si-stanovit-hranice-mezi-pracovnim-a-osobnim-zivotem",
+        "vyhody-flexibilni-pracovni-doby-a-jak-ji-efektivne-vyuzivat",
+        "aktivity-pro-relaxaci-a-regeneraci-po-praci",
+        "jak-ridit-cas-a-prioritizovat-ukoly-pro-zachovani-rovnovahy"
+      ] 
+    },
+  "workaholic":
+    {
+    "text": "Vypadá to, že se většinu svého volného času věnujete práci. Pokud vám to tak vyhovuje, není na tom určitě nic špatného. Ale jestli se potřebujete dostat z nekonečného pracovního koloběhu, můžete si přečíst námi připravené články níže.",
+    "references":
+        [
+          "prvni-kroky-ke-snizeni-pracovniho-nasazeni",
+          "efektivni-techniky-time-managementu-pro-workoholiky",
+          "jak-rozpoznat-varovne-signaly-prepracovanosti",
+          "strategie-pro-postupne-zkracovani-pracovniho-casu",
+          "jak-si-najit-cas-na-sebe-a-sve-konicky"
+        ] 
+    },
+  "burnout":
+    {
+    "text": "Vypadá to, že se práci věnujete mnohem více, než byste chtěli, a to vás naprosto vyčerpává. Možná právě prožíváte vyhoření nebo jste mu velice blízko. Je důležité si udělat čas na sebe a pořádně si odpočinout. Připravili jsme pro vás články, které vám s tím pomohou.",
+    "references":
+        [
+          "kroky-k-zotaveni-z-vyhoreni",
+          "vyznam-odpocinku-a-regenerace-pri-vyhoreni",
+          "jak-se-postupne-vratit-do-prace-po-vyhoreni",
+          "podpora-a-zdroje-pro-lidi-trpici-vyhorenim"
+        ] 
+    }
+}
+  
