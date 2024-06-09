@@ -1,20 +1,16 @@
 'use client';
 import { useRef, useEffect } from 'react';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 
-export const BlogContent = ({ posts, totalPages, page }) => {
-  const lastHash = useRef('');
+export const BlogContent = ({ posts, totalPages, page, pageNumber }) => {
+  const lastHash = useRef();
 
   useEffect(() => {
-    if (lastHash.current && document.getElementById(lastHash.current)) {
-      setTimeout(() => {
-        document
-          .getElementById(lastHash.current)
-          ?.scrollIntoView({ behavior: 'smooth' });
-        lastHash.current = '';
-      }, 100);
+    if (page !== null) {
+      lastHash.current.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [location]);
+  }, [page]);
 
   return (
     <main>
@@ -60,17 +56,21 @@ export const BlogContent = ({ posts, totalPages, page }) => {
       </ul>
 
       <div className="pagination">
-        {page > 1 && <Link href={`?page=${page - 1}`}>&laquo;</Link>}
+        {pageNumber > 1 && (
+          <Link href={`?page=${pageNumber - 1}`}>&laquo;</Link>
+        )}
         {Array.from({ length: totalPages }, (_, index) => (
           <Link
             key={index + 1}
-            href={`?page=${index + 1}#scroll`}
-            className={page === index + 1 ? 'pag-active' : ''}
+            href={`?page=${index + 1}`}
+            className={pageNumber === index + 1 ? 'pag-active' : ''}
           >
             {index + 1}
           </Link>
         ))}
-        {posts.length === 5 && <Link href={`?page=${page + 1}`}>&raquo;</Link>}
+        {posts.length === 5 && (
+          <Link href={`?page=${pageNumber + 1}`}>&raquo;</Link>
+        )}
       </div>
     </main>
   );
