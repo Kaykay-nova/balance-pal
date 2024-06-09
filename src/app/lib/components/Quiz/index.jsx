@@ -1,14 +1,22 @@
 'use client';
 import { useState } from 'react';
 import questions from "./data.json" with { type: "json" };
+import Link from 'next/link';
 
 
-export const Quiz = () => {
+const resultTexts = {
+  happy: "Jste šťastný člověk! Zřejmě máte velmi dobrý balanc mezi prací a osobním životem.",
+  balance: "Máte dobrou rovnováhu mezi prací a osobním životem, jen tak dál!",
+  workaholic: "Jste workoholik! Možná byste měli věnovat více času odpočinku a relaxaci.",
+  burnout: "Jste na pokraji vyhoření! Je důležité udělat si čas na sebe a odpočinout si.",
+};
+
+
+export const Quiz = ({ onQuit }) => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [quizEnded, setQuizEnded] = useState(false);
-
 
   const handleChoice = (choice) => {
     setSelectedOption(choice);
@@ -33,15 +41,24 @@ export const Quiz = () => {
     }
   };
 
-  const calculateResult = () => {
-    const result = answers.reduce((acc, answer) => {
-      acc[answer] = (acc[answer] || 0) + 1;
-      return acc;
-    }, {});
+  const handleQuit = () => {
+    if (window.confirm("Opravdu chcete ukončit kvíz?")) {
+      onQuit();
+    }
+  };
 
-    const mostFrequentCategory = Object.keys(result).reduce((a, b) =>
-      result[a] > result[b] ? a : b,
-    );
+  const handleRestart = () => {
+    setQuestionNumber(0);
+    setSelectedOption(null);
+    setAnswers([]);
+    setQuizEnded(false);
+  };
+
+  const calculateResult = () => {
+    const categories = ['happy', 'balance', 'workaholic', 'burnout'];
+    const counts = categories.map(category => answers.filter(answer => answer === category).length);
+    const maxCount = Math.max(...counts);
+    const mostFrequentCategory = categories[counts.indexOf(maxCount)];
 
     return mostFrequentCategory;
   };
@@ -49,18 +66,14 @@ export const Quiz = () => {
   return (
     <main>
       <div className="quiz__container">
-        <form className="quiz__form">
+        <form className='quiz__form'>
           <div id="scroll" className="quiz__header">
-            <div className="quiz__counter">
-              {questionNumber + 1}/{questions.length}
-            </div>
-            <button type="button" className="quiz__cancel-btn">
-              Ukončit
-            </button>
+            <div className="quiz__counter">{questionNumber + 1}/{questions.length}</div>
+            <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Ukončit</button>
           </div>
 
           {!quizEnded ? (
-            <div className="quiz__body">
+            <div className='quiz__body'>
               <h2 className='quiz__title'>{questions[questionNumber].title}</h2>
               <div className='quiz__questions'>
                 {questions[questionNumber].options.map((option, index) => (
@@ -77,37 +90,48 @@ export const Quiz = () => {
               </div>
             </div>
           ) : (
-            <div className="quiz__body">
-              <h2 className="quiz__title">Výsledek</h2>
-              <p className="quiz__result">
-                Vaše nejčastější odpověď je: {calculateResult()}
-              </p>
+            <div className='quiz__body'>
+              <h2 className='quiz__title'>Výsledek</h2>
+              <p className='quiz__result'>{resultTexts[calculateResult()]}</p>
+              <div className='quiz__buttons'>
+                <button type="button" onClick={handleRestart} className="quiz__btn">Opakovat kvíz</button>
+                <Link href="/blog" className="quiz__btn">Přejít na blog</Link>
+              </div>
             </div>
           )}
 
-          <div className="post__buttons">
-            <button
-              type="button"
-              className="post__buttons--btn"
-              onClick={handlePrevious}
-              disabled={questionNumber === 0}
-            >
-              &laquo; Předchozí
-            </button>
-
-            {!quizEnded && (
-              <button
-                type="button"
-                className="post__buttons--btn"
-                onClick={handleNext}
-                disabled={!selectedOption}
+          {!quizEnded && (
+            <div className="post__buttons">
+              <button 
+                type="button" 
+                className="post__buttons--btn" 
+                onClick={questionNumber === 0 ? null : handlePrevious} 
               >
-                Další &raquo;
+                &laquo; Předchozí
               </button>
-            )}
-          </div>
+              {questionNumber + 1 === questions.length ? (
+                <button 
+                  type="button" 
+                  className="post__buttons--btn" 
+                  onClick={handleNext} 
+                  disabled={!selectedOption}
+                >
+                  Odeslat
+                </button>
+              ) : (
+                <button 
+                  type="button" 
+                  className="post__buttons--btn" 
+                  onClick={handleNext} 
+                  disabled={!selectedOption}
+                >
+                  Další &raquo;
+                </button>
+              )}
+            </div>
+          )}
         </form>
       </div>
     </main>
   );
-};
+}
