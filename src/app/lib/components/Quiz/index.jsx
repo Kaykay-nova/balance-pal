@@ -2,6 +2,9 @@
 import { useState, forwardRef } from 'react';
 import questions from "./data.json" with { type: "json" };
 import { QuizResult } from '../QuizResult';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
 
 export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
   const [questionNumber, setQuestionNumber] = useState(1);
@@ -68,7 +71,11 @@ export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
             
             {!quizEnded ? 
             <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Ukončit</button> 
-            : <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Zavřít</button>}
+            : <button type="button" className="quiz__cancel-btn" onClick={handleQuit}> <FontAwesomeIcon
+            className="close__icon"
+            icon={faXmark}
+            />
+            Zavřít</button>}
           </div>
 
           {!quizEnded ? (

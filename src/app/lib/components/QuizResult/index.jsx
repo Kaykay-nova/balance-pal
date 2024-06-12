@@ -1,8 +1,26 @@
+'use client'
 import resultTexts from "./results.json" with { type: "json" };
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faRotate } from '@fortawesome/free-solid-svg-icons';
+import lottie from 'lottie-web';
+import { useEffect, useRef } from 'react';
+
+
 
 export const QuizResult = ({onRestart, answers, posts}) => {
-  console.log(posts)
+  const animationConfetti = useRef(null);
+
+  useEffect(() => {
+    const confettiInstance = lottie.loadAnimation({
+      container: animationConfetti.current,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      path: '/animation/animationConfetti.json',
+    });
+    return () => confettiInstance.destroy();
+  }, []);
 
   const calculateResult = () => {
     const categories = ['happy', 'balance', 'workaholic', 'burnout'];
@@ -21,19 +39,30 @@ export const QuizResult = ({onRestart, answers, posts}) => {
   return (
   
   <div className='quiz__body'>
+    <div id="result__lottie-confetti" ref={animationConfetti}></div>
     <h2 className='quiz__title'>Váš výsledek</h2>
       <p className='quiz__result'>{result.text} 
     </p>
-    <ul>
+    <ul className="quiz__result-links">
       {resultPosts.map((p)=> {
-       return( <li>
+       return(<li className="quiz__result-link">
           <Link href={`/posts/${p.slug}`}>{p.data.title}</Link>
           </li>)
       })}
     </ul>
     <div className='quiz__result-btn'>
-      <button type="button" onClick={() => onRestart()} className="post__buttons--btn result-btn">Opakovat kvíz</button>
-      <Link href="/blog" className="post__buttons--btn result-btn">Všechny články</Link>
+      <button type="button" onClick={() => onRestart()} className="post__buttons--btn result-btn">
+        <FontAwesomeIcon
+            className="refresh__icon"
+            icon={faRotate}
+        /> 
+        Znovu</button>
+      <Link href="/blog" className="post__buttons--btn result-btn">Všechny články
+        <FontAwesomeIcon
+          className="refresh__icon"
+          icon={faAngleRight}
+        />
+      </Link>
     </div>
   </div>
   )
