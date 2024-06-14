@@ -9,13 +9,23 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const contacts = {
   kristyna: {
     title: 'Kristýna Konečná',
-    description: 'TODO: Týna description',
+    descriptionTitle: 'TODO: Týna úvodní věta',
+    descriptionText: 'TODO: Krista text',
     link: '/contact/patricie',
+    github: 'https://github.com/Kaykay-nova',
+    linkedin: 'https://linkedin.com/in/kristýna-konečná-590292290',
+    email: 'mailto:#',
   },
   patricie: {
     title: 'Patricie Vyhlídalová',
-    description: 'TODO: Paty description',
+    descriptionTitle:
+      'Předchozí práce mě naučily pečlivosti, trpělivosti a schopnosti pracovat na týmových i samostatných projektech.',
+    descriptionText:
+      'O obor IT se zajímám druhým rokem. Účastnila jsem se několika jednodenních a dvoudenních kurzů v rámci Czechitas, jako jsou Poznej Salesforce, Úvod do programování 1 a 2: Python, nebo Test it - testování v praxi. Na podzim roku 2023 jsem se rozhodla zaměřit na frontend, a proto jsem absolvovala semestrální kurz JavaScript 1, po kterém následovala Digitální Akademie: WEB, kterou jsem úspěšně dokončila v červnu 2024. I když vím, že to bude vyžadovat ještě spoustu času, chci se do budoucna zaměřit na full-stack vývoj.',
     link: '/contact/kristyna',
+    github: 'https://github.com/Pattiev97',
+    linkedin: 'https://linkedin.com/in/patricie-vyhlidalova',
+    email: 'mailto:patina.vy@gmail.com',
   },
 };
 
@@ -45,10 +55,7 @@ const ContactDetail = () => {
           <Link href="/contact/patricie" className="contact__person">
             <div className="contact__person--card paty">
               <h3 className="contact__paty">Páťa</h3>
-              <img
-                src="/img/patricie-vyhlidalova.jpg"
-                alt="Foto Páťa"
-              />
+              <img src="/img/patricie-vyhlidalova.jpg" alt="Foto Páťa" />
             </div>
           </Link>
         </aside>
@@ -65,19 +72,34 @@ const ContactDetail = () => {
             <h1>{contact.title}</h1>
             <div className="contact__social">
               <div className="footer__social-icons">
-                <Link href="mailto:#" target="_blank" className="footer__icon">
+                <Link
+                  href={`${contact.email}`}
+                  target="_blank"
+                  className="footer__icon"
+                >
                   <FontAwesomeIcon className="footer__icon" icon={faEnvelope} />
                 </Link>
-                <Link href="#" target="_blank" className="footer__icon">
+                <Link
+                  href={`${contact.github}`}
+                  target="_blank"
+                  className="footer__icon"
+                >
                   <FontAwesomeIcon className="footer__icon" icon={faGithub} />
                 </Link>
-                <Link href="#" target="_blank" className="footer__icon">
+                <Link
+                  href={`${contact.linkedin}`}
+                  target="_blank"
+                  className="footer__icon"
+                >
                   <FontAwesomeIcon className="footer__icon" icon={faLinkedin} />
                 </Link>
               </div>
             </div>
           </div>
-          <p>{contact.description}</p>
+          <p>
+            <em>{contact.descriptionTitle}</em>
+          </p>
+          <p>{contact.descriptionText}</p>
         </div>
       </div>
     </main>

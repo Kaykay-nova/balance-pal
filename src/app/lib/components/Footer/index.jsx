@@ -19,53 +19,43 @@ export function Footer() {
                   target="_blank"
                   className="footer__icon"
                 >
-                  <FontAwesomeIcon
-                    className="footer__icon"
-                    icon={faGithub}
-                  />
+                  <FontAwesomeIcon className="footer__icon" icon={faGithub} />
                 </Link>
                 <Link
                   href="https://linkedin.com/in/kristýna-konečná-590292290"
                   target="_blank"
                   className="footer__icon"
                 >
-                  <FontAwesomeIcon
-                    className="footer__icon"
-                    icon={faLinkedin}
-                  />
+                  <FontAwesomeIcon className="footer__icon" icon={faLinkedin} />
                 </Link>
               </div>
             </div>
             <div className="footer__social">
               <p className="footer__social-name">Páťa</p>
               <div className="footer__social-icons">
-                <Link href="#" target="_blank" className="footer__icon">
-                  <FontAwesomeIcon
-                    className="footer__icon"
-                    icon={faGithub}
-                  />
+                <Link
+                  href="https://github.com/Pattiev97"
+                  target="_blank"
+                  className="footer__icon"
+                >
+                  <FontAwesomeIcon className="footer__icon" icon={faGithub} />
                 </Link>
-                <Link href="#" target="_blank" className="footer__icon">
-                  <FontAwesomeIcon
-                    className="footer__icon"
-                    icon={faLinkedin}
-                  />
+                <Link
+                  href="https://linkedin.com/in/patricie-vyhlidalova"
+                  target="_blank"
+                  className="footer__icon"
+                >
+                  <FontAwesomeIcon className="footer__icon" icon={faLinkedin} />
                 </Link>
               </div>
             </div>
           </div>
         </div>
         <div className="footer__nav-photo">
-          <Link
-            className="footer__photo footer__photo--quiz"
-            href="/"
-          >
+          <Link className="footer__photo footer__photo--quiz" href="/">
             Kvíz
           </Link>
-          <Link
-            className="footer__photo footer__photo--blog"
-            href="/blog"
-          >
+          <Link className="footer__photo footer__photo--blog" href="/blog">
             Tipy
           </Link>
         </div>
