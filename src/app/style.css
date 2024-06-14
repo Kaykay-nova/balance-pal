@@ -185,7 +185,6 @@ p {
   }
 }
 
-
 .hero {
   overflow: hidden;
   display: flex;
@@ -546,6 +545,33 @@ input {
 .footer__rights>a:hover {
   color: #2a2823;
   background-color: #FFB400;
+}
+
+@media (max-width: 850px) {
+  .footer__photo {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer__container {
+    justify-content: center;
+  }
+
+  .footer__nav-photo {
+    display: none;
+  }
+
+  .footer__social-links {
+    display: none;
+  }
+
+  .footer__rights {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5rem;
+  }
 }
 
 /* Blog styly */
