@@ -9,12 +9,12 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const contacts = {
   kristyna: {
     title: 'Kristýna Konečná',
-    descriptionTitle: 'TODO: Týna úvodní věta',
-    descriptionText: 'TODO: Krista text',
+    descriptionTitle: 'Programování mě baví, protože je to kreativní proces, kde z několika řádků kódu vznikají funkční a užitečné aplikace. Je to nekonečná cesta objevování a učení se, protože technologie se neustále vyvíjí. A nakonec, je to pocit uspokojení, když vidíte, že váš kód funguje a lidé ho používají.',
+    descriptionText: 'Z grafického designu jsem se přirozeně dostala k programování. Zajímala mě nejen vizuální stránka, ale i technické zázemí webových stránek. V předchozí práci jsem editovala obsah našeho webu, a tak jsem se poprvé setkala s HTML a CSS. To mě motivovalo k dalšímu vzdělávání. Chvíli jsem se učila samostudiem, ale cílený rekvalifikační kurz programování v jazyce Javascript mi dal potřebné základy. Nyní se účastním kurzu Digitální akademie u Czechitas, kde se zaměřuji na front-end vývoj s Reactem. Ačkoli je přede mnou ještě dlouhá cesta, už teď se těším z toho, co jsem se naučila a co všechno dokážu vytvořit.',
     link: '/contact/patricie',
     github: 'https://github.com/Kaykay-nova',
     linkedin: 'https://linkedin.com/in/kristýna-konečná-590292290',
-    email: 'mailto:#',
+    email: 'mailto:kristyna.konecna@gmail.com',
   },
   patricie: {
     title: 'Patricie Vyhlídalová',
@@ -46,7 +46,7 @@ const ContactDetail = () => {
           <Link href="/contact/kristyna" className="contact__person">
             <div className="contact__person--card">
               <img
-                src="/img/prince-akachi-J1OScm_uHUQ-unsplash.jpg"
+                src="/img/profil_kristyna.jpg"
                 alt="Foto Kristýna"
               />
               <h3>Kristýna</h3>

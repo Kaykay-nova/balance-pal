@@ -9,7 +9,7 @@ export default function Contact() {
           <Link href="/contact/kristyna" className="contact__person">
             <div className="contact__person--card">
               <img
-                src="/img/prince-akachi-J1OScm_uHUQ-unsplash.jpg"
+                src="/img/profil_kristyna.jpg"
                 alt="Foto Kristýna"
               />
               <h3>Kristýna</h3>
