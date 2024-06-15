@@ -417,7 +417,8 @@ input {
   text-align: center;
 }
 
-.quiz__result-link>a {
+.quiz__result-link > a {
+  cursor: pointer;
   color: #2a2823;
   font-weight: 600;
   text-decoration: none;

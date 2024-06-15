@@ -6,8 +6,6 @@ import { faAngleRight, faRotate } from '@fortawesome/free-solid-svg-icons';
 import lottie from 'lottie-web';
 import { useEffect, useRef } from 'react';
 
-
-
 export const QuizResult = ({onRestart, answers, posts}) => {
   const animationConfetti = useRef(null);
 
@@ -34,36 +32,41 @@ export const QuizResult = ({onRestart, answers, posts}) => {
   const result = resultTexts[calculateResult()];
   const resultPosts = posts.filter((post) => {
     return result.references.includes(post.slug)
-  })
+  });
+
+  const openInNewTab = (url) => {
+    window.open(url, '_blank');
+  }
 
   return (
-  
-  <div className='quiz__body'>
-    <div id="result__lottie-confetti" ref={animationConfetti}></div>
-    <h2 className='quiz__title'>Váš výsledek</h2>
-      <p className='quiz__result'>{result.text} 
-    </p>
-    <ul className="quiz__result-links">
-      {resultPosts.map((p)=> {
-       return(<li className="quiz__result-link">
-          <Link href={`/posts/${p.slug}`}>{p.data.title}</Link>
-          </li>)
-      })}
-    </ul>
-    <div className='quiz__result-btn'>
-      <button type="button" onClick={() => onRestart()} className="post__buttons--btn result-btn">
-        <FontAwesomeIcon
+    <div className='quiz__body'>
+      <div id="result__lottie-confetti" ref={animationConfetti}></div>
+      <h2 className='quiz__title'>Váš výsledek</h2>
+      <p className='quiz__result'>{result.text}</p>
+      <ul className="quiz__result-links">
+        {resultPosts.map((p)=> {
+          return (
+            <li className="quiz__result-link" key={p.slug}>
+              <a onClick={() => openInNewTab(`/posts/${p.slug}`)}>{p.data.title}</a>
+            </li>
+          )
+        })}
+      </ul>
+      <div className='quiz__result-btn'>
+        <button type="button" onClick={() => onRestart()} className="post__buttons--btn result-btn">
+          <FontAwesomeIcon
             className="refresh__icon"
             icon={faRotate}
-        /> 
-        Znovu</button>
-      <Link href="/blog" className="post__buttons--btn result-btn">Všechny články
-        <FontAwesomeIcon
-          className="refresh__icon"
-          icon={faAngleRight}
-        />
-      </Link>
+          /> 
+          Znovu
+        </button>
+        <Link href="/blog" className="post__buttons--btn result-btn">Všechny články
+          <FontAwesomeIcon
+            className="refresh__icon"
+            icon={faAngleRight}
+          />
+        </Link>
+      </div>
     </div>
-  </div>
   )
 }
