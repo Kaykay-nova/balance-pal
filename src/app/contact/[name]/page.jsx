@@ -60,18 +60,10 @@ const ContactDetail = () => {
           </Link>
         </aside>
         <div className="contact__main-content">
-          <div className="contact__btn">
-            <Link className="btn" href="/contact">
-              &laquo; Zpět
-            </Link>
-            <Link href={contact.link} className="btn">
-              Druhá autorka &raquo;
-            </Link>
-          </div>
           <div className="contact__header">
             <h1>{contact.title}</h1>
             <div className="contact__social">
-              <div className="footer__social-icons">
+              <div className="footer__social-icons contact-icons">
                 <Link
                   href={`${contact.email}`}
                   target="_blank"
@@ -100,6 +92,15 @@ const ContactDetail = () => {
             <em>{contact.descriptionTitle}</em>
           </p>
           <p>{contact.descriptionText}</p>
+
+          <div className="contact__btn">
+            <Link className="btn" href="/contact">
+              &laquo; Zpět
+            </Link>
+            <Link href={contact.link} className="btn">
+              Druhá autorka &raquo;
+            </Link>
+          </div>
         </div>
       </div>
     </main>

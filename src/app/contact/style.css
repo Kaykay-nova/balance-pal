@@ -1,12 +1,12 @@
 /* kontakty */
 
 .contact__container {
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
   background-color: #0f4438;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 5rem 0rem 25rem;
 }
 
 .contact__aside--panel {
@@ -30,6 +30,7 @@
 .contact__person--card {
   margin: 1rem;
   position: relative;
+  text-align: center;
 }
 
 .paty {
@@ -48,7 +49,6 @@
 .contact__person--card h3 {
   margin: 1rem;
   font-size: 1.2rem;
-  text-align: end;
 }
 
 .contact__person--card:hover img {
@@ -57,6 +57,10 @@
 
 .contact__person--card:hover h3 {
   color: #FFB400;
+}
+
+.contact__main-content {
+  padding: 12% 8% 9% 30%;
 }
 
 .contact__main-content h1 {
@@ -79,7 +83,12 @@
 
 .contact__btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 3rem 0;
+}
+
+.contact-icons{
+  font-size: 2rem;
 }
 
 .btn {
@@ -90,4 +99,84 @@
 
 .btn:hover {
   color: #ffb200;
+}
+
+@media (max-width: 1200px) {
+  .contact__container {
+    padding: 0% 6%;
+  }
+
+  .contact__main-content {
+    padding: 12% 3% 8% 28%;
+}
+
+  .contact__aside--panel {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 861px) {
+  .contact__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .contact__main-content {
+    height: auto;
+    padding: 5rem;
+    order: 1;
+  }
+
+  .contact__aside--panel {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 7.5rem 2rem 2rem;
+    order: -1;
+  }
+
+  .paty {
+    border-top: none;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .contact__paty {
+    padding-top: 0;
+  }
+
+  .contact__person--card h3 {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .contact__aside--panel {
+    padding: 6.5rem 2rem 1rem;
+  }
+
+  .contact__main-content h1 {
+    font-size: 1rem;
+  }
+
+  .contact__person--card img {
+    width: 100px;
+  }
+
+  .contact__main-content {
+    padding: 3rem;
+  }
+
+  .contact-icons{
+    display: flex;
+    margin-left: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .contact-icons{
+    font-size: 1rem;
+  }
 }

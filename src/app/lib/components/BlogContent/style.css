@@ -231,7 +231,7 @@ li {
   }
   
   .main__blog--content {
-    padding: 2rem;
+    padding: 2rem 2.5rem;
     max-width: 450px;
     font-weight: 400;
   }
