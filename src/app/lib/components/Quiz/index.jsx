@@ -70,18 +70,16 @@ export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
             : <div/>}
           </div>
             
-            {!quizEnded ? 
-            <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>Ukončit</button> 
-            : <button type="button" className="quiz__cancel-btn" onClick={handleQuit}> <FontAwesomeIcon
-            className="close__icon"
-            icon={faXmark}
-            />
-            Zavřít</button>}
+            <button type="button" className="quiz__cancel-btn" onClick={handleQuit}>
+              <FontAwesomeIcon
+                className="close__icon"
+                icon={faXmark}
+              /></button>
           </div>
 
           {!quizEnded ? (
             <div className='quiz__body'>
-              <h2 className='quiz__title'>{questions[questionNumber - 1].title}</h2>
+              <h2 className='quiz__question-title'>{questions[questionNumber - 1].title}</h2>
               <div className='quiz__questions'>
                 {questions[questionNumber - 1].options.map((option, index) => (
                   <label key={index} className={selectedOption === option ? 'quiz__question selected__btn' : 'quiz__question'}
@@ -109,7 +107,7 @@ export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
                 className="post__buttons--btn" 
                 onClick={handlePrevious} 
               >
-                &laquo; Předchozí
+                &laquo; <span className='btn__text'>Předchozí</span>
               </button> : <div/>}
               
               {questionNumber === questions.length ? (
@@ -119,7 +117,7 @@ export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
                   onClick={handleNext} 
                   disabled={!selectedOption}
                 >
-                  Odeslat
+                  <span className='btn__text'>Odeslat</span> &#10149;
                 </button>
               ) : (
                 <button 
@@ -128,7 +126,7 @@ export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
                   onClick={handleNext} 
                   disabled={!selectedOption}
                 >
-                  Další &raquo;
+                  <span className='btn__text'>Další</span> &raquo;
                 </button>
               )}
             </div>

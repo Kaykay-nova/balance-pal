@@ -92,3 +92,83 @@
   color: #FFB400;
   box-shadow: 0 0 10px 5px #FFB400;
 }
+
+@media (max-width: 1740px) {
+  #hero__lottie-main {
+    width: 600px;
+    height: 600px;
+    border: none;
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 1504px) {
+  #hero__lottie-main {
+    width: 500px;
+    height: 500px;
+    border: none;
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 1324px) {
+  #hero__lottie-main {
+    width: 400px;
+    height: 500px;
+    border: none;
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 650px) {
+
+  #hero__lottie-main {
+    width: 350px;
+    height: 500px;
+    border: none;
+    padding-top: 5rem;
+  }
+
+  h1{
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  #content__lottie-people {
+    width: 270px;
+    height: 300px;
+    border: none;
+  }
+
+  .content{
+    padding: 22%;
+  }
+
+  .quiz{
+    padding: 22%;
+  }
+
+  .quiz__title {
+    text-align: center;
+  }
+
+  .quiz__ready {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .quiz__content  {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 10rem;
+  }
+
+  .quiz__btn {
+    margin: 0;
+    padding: 16px 37px;
+  }
+}

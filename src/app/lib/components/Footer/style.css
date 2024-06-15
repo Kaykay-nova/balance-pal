@@ -121,4 +121,9 @@
     align-items: center;
     gap: 5rem;
   }
+
+  .footer__rights>a {
+    padding: 1rem;
+  }
+
 }

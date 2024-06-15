@@ -54,14 +54,14 @@ export const QuizResult = ({onRestart, answers, posts}) => {
         })}
       </ul>
       <div className='quiz__result-btn'>
-        <button type="button" onClick={() => onRestart()} className="post__buttons--btn result-btn">
+        <button type="button" onClick={() => onRestart()} className="result-btn">
           <FontAwesomeIcon
             className="refresh__icon"
             icon={faRotate}
           /> 
           Znovu
         </button>
-        <Link href="/blog" className="post__buttons--btn result-btn">Všechny články
+        <Link href="/blog" className="result-btn">Všechny články
           <FontAwesomeIcon
             className="refresh__icon"
             icon={faAngleRight}
