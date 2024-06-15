@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import '../../../style.css';
+import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
