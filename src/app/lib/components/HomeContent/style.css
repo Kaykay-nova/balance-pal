@@ -119,15 +119,24 @@
 }
 
 @media (max-width: 650px) {
-
-
   #content__lottie-people {
-    width: 270px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+  }
+
+  #quiz__lottie-quiz {
+    width: 250px;
+    height: 250px;
+    border: none;
   }
 
   .content{
     padding: 22%;
+  }
+
+  .content__paragraph {
+    line-height: 1.5rem;
+    font-size: 1rem;
   }
 
   .quiz{

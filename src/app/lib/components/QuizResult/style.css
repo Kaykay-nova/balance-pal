@@ -81,4 +81,8 @@
     width: 15rem;
   }
 
+  .quiz__result {
+    font-size: 1rem;
+  }
+
 }

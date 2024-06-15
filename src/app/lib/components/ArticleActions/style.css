@@ -14,3 +14,66 @@
 .main__post--content p {
   color: #085C48;
 }
+
+
+@media (max-width: 950px) {
+
+  .main__post--header-content {
+    flex-wrap: wrap;
+    margin: 0 10%;
+  }
+
+  .main__post--cover {
+    height: 250px;
+    width: 250px;
+  }
+
+  .main__post--text {
+    padding: 1rem 0;
+    align-items: center;
+  }
+
+  .main__post--title {
+    text-align: center;
+  }
+
+  .main__post--content {
+    grid-template-columns: auto;
+    padding: 5rem 4rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .main__post--title {
+    text-align: center;
+  }
+
+  .main__post--btn {
+    margin: 1rem;
+    padding: 13px 29px;
+    font-size: 0.7rem;
+  }
+  .main__post--cover {
+    height: 250px;
+    width: 250px;
+    margin: 2rem;
+  }
+
+  .main__post--content {
+    gap: 4rem;
+  }
+
+  .main__post--content h3 {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .main__post--content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .main__post--text {
+    align-items: center;
+  }
+}

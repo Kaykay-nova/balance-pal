@@ -134,16 +134,16 @@ input {
     width: 100%;
   }
 
-  .quiz__question-title {
-    text-align: center;
-  }
-
   .quiz__container {
     padding: 30% 10% 20%;
   }
 
   .quiz__questions {
-    padding: 0 0 2rem;
+    padding-bottom: 2rem;
   }
+
+  .quiz__question {
+    padding: 0.7rem;
+}
 
 }

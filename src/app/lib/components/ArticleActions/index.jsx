@@ -10,7 +10,7 @@ const ArticleActions = ({ currentIndex, posts }) => {
     <div className="post__buttons">
       {prevSlug ? (
         <Link href={`/posts/${prevSlug}`} className="post__buttons--btn">
-          &laquo; Předchozí
+          &laquo; <span className='btn__text'>Předchozí</span>
         </Link>
       ) : (
         <div />
@@ -22,7 +22,7 @@ const ArticleActions = ({ currentIndex, posts }) => {
         </Link>
       ) : (
         <Link href={`/posts/${nextSlug}`} className="post__buttons--btn">
-          Další &raquo;
+          <span className='btn__text'>Další</span> &raquo;
         </Link>
       )}
     </div>

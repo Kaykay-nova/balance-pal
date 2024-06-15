@@ -154,12 +154,21 @@
 
 
 @media (max-width: 650px) {
+  .contact__header {
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+
   .contact__aside--panel {
     padding: 6.5rem 2rem 1rem;
   }
 
   .contact__main-content h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .contact__main-content p {
+    line-height: 1.5rem;
   }
 
   .contact__person--card img {
@@ -179,4 +188,6 @@
   .contact-icons{
     font-size: 1rem;
   }
+
+  
 }

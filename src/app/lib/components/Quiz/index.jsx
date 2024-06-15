@@ -107,7 +107,7 @@ export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
                 className="post__buttons--btn" 
                 onClick={handlePrevious} 
               >
-                &laquo; <span className='btn__text'>Předchozí</span>
+               &#10094; <span className='btn__text'>Předchozí</span>
               </button> : <div/>}
               
               {questionNumber === questions.length ? (
@@ -126,7 +126,7 @@ export const Quiz = forwardRef( ({ onQuit, posts }, ref) => {
                   onClick={handleNext} 
                   disabled={!selectedOption}
                 >
-                  <span className='btn__text'>Další</span> &raquo;
+                  <span className='btn__text'>Další</span> &#10095;
                 </button>
               )}
             </div>
