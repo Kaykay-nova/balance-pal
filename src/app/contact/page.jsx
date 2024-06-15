@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import '../../app/style.css';
+import './style.css';
 
 export default function Contact() {
   return (

@@ -1,0 +1,93 @@
+/* kontakty */
+
+.contact__container {
+  height: 100vh;
+  background-color: #0f4438;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 5rem 0rem 25rem;
+}
+
+.contact__aside--panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #2a2823;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact__person {
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+}
+
+.contact__person--card {
+  margin: 1rem;
+  position: relative;
+}
+
+.paty {
+  border-top: 1px solid white;
+}
+
+.contact__paty {
+  padding-top: 1rem;
+}
+
+.contact__person--card img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.contact__person--card h3 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-align: end;
+}
+
+.contact__person--card:hover img {
+  box-shadow: 0 0 10px 5px #FFB400
+}
+
+.contact__person--card:hover h3 {
+  color: #FFB400;
+}
+
+.contact__main-content h1 {
+  margin: 1rem 0;
+}
+
+.contact__main-content p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: white;
+}
+
+.contact__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  margin: 3rem 0;
+}
+
+.contact__btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  font-size: small;
+}
+
+.btn:hover {
+  color: #ffb200;
+}

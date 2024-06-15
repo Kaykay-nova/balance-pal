@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
+import './style.css'
 
 export const BlogContent = ({
   paginatedPosts,

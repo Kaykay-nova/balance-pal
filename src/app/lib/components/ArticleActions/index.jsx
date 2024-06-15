@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import './style.css';
 
 const ArticleActions = ({ currentIndex, posts }) => {
   const prevSlug = posts[currentIndex - 1]?.slug;

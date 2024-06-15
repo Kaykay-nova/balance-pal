@@ -1,5 +1,6 @@
 'use client';
 import '@/app/style.css';
+import './style.css'
 import { Quiz } from '@/app/lib/components/Quiz';
 import lottie from 'lottie-web';
 import { useEffect, useRef, useState } from 'react';

@@ -1,3 +1,5 @@
+import './style.css'
+
 const ArticleHeader = ({ title, date, coverImage }) => {
   return (
     <div className="main__post--header">

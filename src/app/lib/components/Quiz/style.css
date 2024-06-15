@@ -1,0 +1,93 @@
+/* quiz komponenta */
+
+.quiz__container {
+  display: flex;
+  flex-direction: column;
+  padding: 10% 22%;
+}
+
+.quiz__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.quiz__cancel-btn {
+  text-decoration: none;
+  border: none;
+  font-size: 0.8rem;
+  background-color: #ffffff;
+  box-shadow: -3px 10px 20px #babecc, -10px 10px 20px #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-align: center;
+  color: #2a2823;
+  text-transform: uppercase;
+}
+
+.quiz__cancel-btn:hover {
+  font-weight: 600;
+  box-shadow: 0 0 10px 5px #ff6565;
+}
+
+.quiz__questions {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 4rem;
+}
+
+.quiz__question {
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.quiz__question:hover {
+  cursor: pointer;
+  background-color: #e3bf6b;
+  border-radius: 25px 25px;
+  padding: 1rem;
+}
+
+input {
+  margin-right: 1rem;
+}
+
+.selected__btn {
+  background-color: #1B7C65;
+  border-radius: 25px 25px;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.selected__btn:hover {
+  background-color: #1B7C65;
+  padding: 1rem 2rem;
+}
+
+.quiz__title {
+  color: #2a2823;
+  padding: 2rem 1rem;
+}
+
+/* progress bar */
+
+.quiz__progressbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+}
+
+#progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  margin: 20px;
+}
+
+#bar {
+  height: 30px;
+  background-color: #1B7C65;
+  transition: all ease-in-out 0.5s;
+}
+
