@@ -48,7 +48,7 @@ export const QuizResult = ({onRestart, answers, posts}) => {
         {resultPosts.map((p)=> {
           return (
             <li className="quiz__result-link" key={p.slug}>
-              <a onClick={() => openInNewTab(`/posts/${p.slug}`)}>{p.data.title}</a>
+              <a onClick={() => openInNewTab(`/blog/${p.slug}`)}>{p.data.title}</a>
             </li>
           )
         })}
