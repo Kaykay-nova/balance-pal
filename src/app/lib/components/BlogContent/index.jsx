@@ -1,7 +1,7 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
-import './style.css'
+import './style.css';
 
 export const BlogContent = ({
   paginatedPosts,
@@ -45,7 +45,7 @@ export const BlogContent = ({
         {paginatedPosts.map((post) => {
           return (
             <li className="blog-list__item" key={post.slug}>
-              <Link className="blog-list__post" href={`/posts/${post.slug}`}>
+              <Link className="blog-list__post" href={`/blog/${post.slug}`}>
                 <span
                   className="blog-list__post--cover"
                   style={{
