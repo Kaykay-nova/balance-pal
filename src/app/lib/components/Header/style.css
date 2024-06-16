@@ -49,6 +49,13 @@
     flex-direction: column;
   }
 
+  .hamburgerWraper {
+    width: 30px;
+    height: 35px;
+    padding-top: 15px;
+    cursor: pointer;
+  }
+
   .hamburger,
   .hamburgerActive {
     width: 30px;
