@@ -17,12 +17,22 @@ const contacts = {
         mě nejen vizuální stránka, ale i technické zázemí webových stránek. V
         předchozí práci jsem editovala obsah našeho webu, a tak jsem se poprvé
         setkala s HTML a CSS. To mě motivovalo k dalšímu vzdělávání. Chvíli jsem
-        se učila samostudiem, ale cílený rekvalifikační kurz programování v
-        jazyce Javascript mi dal potřebné základy. Nyní se účastním kurzu&nbsp;
+        se učila samostudiem, ale cílený rekvalifikační kurz&nbsp;
+        {
+          <Link
+            href="https://www.itnetwork.cz/prace-a-podnikani-v-it/rekvalifikacni-kurzy/rekvalifikacni-kurzy-javascript"
+            alt="IT network - JavaScript"
+            target='_blank'
+          >
+            programování v jazyce Javascript
+          </Link>
+        }
+        &nbsp;mi dal potřebné základy. Nyní se účastním kurzu&nbsp;
         {
           <Link
             href="https://www.czechitas.cz/kurzy/digitalni-akademie-web"
             alt="Digitální akademie: WEB"
+            target='_blank'
           >
             Digitální akademie
           </Link>
@@ -50,6 +60,7 @@ const contacts = {
           <Link
             href="https://www.czechitas.cz/kurzy/uvod-do-pythonu"
             alt="Úvod do Pythonu"
+            target='_blank'
           >
             Úvod do Pythonu
           </Link>
@@ -59,6 +70,7 @@ const contacts = {
           <Link
             href="https://www.czechitas.cz/kurzy/test-it-testovani-v-praxi"
             alt="Test it - testování v praxi"
+            target='_blank'
           >
             Test it - testování v praxi
           </Link>
@@ -69,6 +81,7 @@ const contacts = {
           <Link
             href="https://www.czechitas.cz/kurzy/javascript-1-zaklady"
             alt="JavaScript 1 - Základy"
+            target='_blank'
           >
             JavaScript 1
           </Link>
@@ -78,6 +91,7 @@ const contacts = {
           <Link
             href="https://www.czechitas.cz/kurzy/digitalni-akademie-web"
             alt="Digitální akademie: WEB"
+            target='_blank'
           >
             Digitální Akademie: WEB
           </Link>
