@@ -1,7 +1,6 @@
 /* kontakty */
 
 .contact__container {
-  position: relative;
   min-height: 100vh;
   background-color: #0f4438;
   display: flex;

@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import '../../../style.css';
+import '@/app/style.css';
 import './style.css';
 import { useState } from 'react';
 

@@ -1,11 +1,12 @@
-import './style.css'
+import Link from 'next/link';
+import './style.css';
 
 const ArticleHeader = ({ title, date, coverImage }) => {
   return (
     <div className="main__post--header">
-      <a href="/blog" className="main__post--btn">
+      <Link href="/blog" className="main__post--btn">
         Zpět na všechny články
-      </a>
+      </Link>
       <div className="main__post--header-content">
         {coverImage && (
           <div

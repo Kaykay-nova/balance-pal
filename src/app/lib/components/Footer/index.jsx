@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import '../../../style.css';
+import '@/app/style.css';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -57,7 +57,7 @@ export function Footer() {
             Kvíz
           </Link>
           <Link className="footer__photo footer__photo--blog" href="/blog">
-            Tipy
+            Blog
           </Link>
         </div>
         <div className="footer__rights">

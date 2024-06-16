@@ -1,7 +1,7 @@
 'use client';
 import { useState, forwardRef } from 'react';
 import questions from "./data.json" with { type: "json" };
-import { QuizResult } from '../QuizResult';
+import { QuizResult } from '@/app/lib/components/QuizResult';
 import './style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';

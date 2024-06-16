@@ -9,8 +9,8 @@ const ArticleActions = ({ currentIndex, posts }) => {
   return (
     <div className="post__buttons">
       {prevSlug ? (
-        <Link href={`/posts/${prevSlug}`} className="post__buttons--btn">
-          &laquo; <span className='btn__text'>Předchozí</span>
+        <Link href={`/blog/${prevSlug}`} className="post__buttons--btn">
+          &laquo; <span className="btn__text">Předchozí</span>
         </Link>
       ) : (
         <div />
@@ -21,8 +21,8 @@ const ArticleActions = ({ currentIndex, posts }) => {
           Všechny články
         </Link>
       ) : (
-        <Link href={`/posts/${nextSlug}`} className="post__buttons--btn">
-          <span className='btn__text'>Další</span> &raquo;
+        <Link href={`/blog/${nextSlug}`} className="post__buttons--btn">
+          <span className="btn__text">Další</span> &raquo;
         </Link>
       )}
     </div>

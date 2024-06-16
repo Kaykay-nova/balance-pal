@@ -14,7 +14,7 @@ export default function Post({ posts, source, frontMatter }) {
   const pathName = usePathname();
 
   const currentIndex = posts.findIndex((post) => {
-    return `/posts/${post.slug}` === pathName;
+    return `/blog/${post.slug}` === pathName;
   });
 
   return (

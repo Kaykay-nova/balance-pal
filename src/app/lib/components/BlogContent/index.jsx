@@ -25,12 +25,12 @@ export const BlogContent = ({
         <div className="main__blog--content">
           <h2 className="main__blog--title">Vítejte na našem blogu!</h2>
           <p className="main__blog--text">
-            “Každý den čelíme různým výzvám, ať už jde o pracovní povinnosti,
+            Každý den čelíme různým výzvám, ať už jde o pracovní povinnosti,
             rodinné záležitosti nebo osobní cíle. Je důležité se zamyslet nad
             tím, jak efektivně spravovat svůj čas, jak se vyhnout vyhoření a jak
             pečovat o své duševní zdraví. Na našem blogu najdete užitečné články
             a tipy, které vám pomohou dosáhnout harmonie mezi prací a osobním
-            životem.”
+            životem.
           </p>
         </div>
         <Link href="#scroll" className="scroll-btn">
