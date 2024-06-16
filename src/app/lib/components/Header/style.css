@@ -97,7 +97,7 @@
     height: 12rem;
     padding-top: 1rem;
     top: 2.3rem;
-    border-radius: 5%;
+    border-radius: 1rem;
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
     display: flex;
@@ -111,14 +111,9 @@
     height: 12rem;
     padding-top: 1rem;
     top: 2.3rem;
-    border-radius: 5%;
-    background-color: #2a2823e1;
+    border-radius: 1rem;
+    background-color: #2a2823e9;
     transform: translateX(0);
     transition: all 0.5s ease-in-out;
-  }
-
-  .header__nav, .sidenavActive {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
   }
 }

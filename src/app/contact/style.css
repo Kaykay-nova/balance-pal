@@ -30,7 +30,6 @@
 .contact__person--card {
   margin: 1rem;
   position: relative;
-  text-align: center;
 }
 
 .paty {
@@ -49,6 +48,7 @@
 .contact__person--card h3 {
   margin: 1rem;
   font-size: 1.2rem;
+  text-align: right;
 }
 
 .contact__person--card:hover img {
@@ -70,6 +70,7 @@
 .contact__main-content p {
   margin: 1rem 0;
   font-size: 1rem;
+  line-height: 1.7rem;
   color: white;
 }
 
@@ -107,7 +108,7 @@
   }
 
   .contact__main-content {
-    padding: 12% 3% 8% 28%;
+    padding: 12% 3% 8% 32%;
 }
 
   .contact__aside--panel {
@@ -148,7 +149,8 @@
   }
 
   .contact__person--card h3 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }
 

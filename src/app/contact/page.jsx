@@ -46,7 +46,7 @@ export default function Contact() {
             rady! 🙌
           </p>
           <p>
-            Pokud vás zajímá více informací o autorkách, rozklikněte naše
+            Pokud vás zajímá více informací o nás, rozklikněte naše
             medailonky.
           </p>
         </div>
