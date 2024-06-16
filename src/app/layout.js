@@ -1,9 +1,9 @@
-import { Inter } from 'next/font/google';
+import { Work_Sans } from 'next/font/google';
 import { Header } from '@/app/lib/components/Header';
 import { Footer } from '@/app/lib/components/Footer';
 import Head from 'next/head';
 
-const inter = Inter({ subsets: ['latin'] });
+const workSans = Work_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'BalancePal',
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="/favicon-16x16.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
       </Head>
-      <body className={inter.className}>
+      <body className={workSans.className}>
         <div className='page'>
           <Header />
           {children}
