@@ -76,4 +76,8 @@
   .main__post--text {
     align-items: center;
   }
+
+  .post__buttons {
+    padding-bottom: 3rem;
+}
 }
