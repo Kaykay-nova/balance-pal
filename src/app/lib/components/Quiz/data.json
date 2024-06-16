@@ -166,11 +166,11 @@
            "category":"happy"
         },
         {
-           "text":"Několikrát měsíčně",
+           "text":"Více než 5× měsíčně",
            "category":"balance"
         },
         {
-           "text":"Jednou nebo méně než 5x měsíčně",
+           "text":"1× až 4× měsíčně",
            "category":"workaholic"
         },
         {
@@ -205,7 +205,7 @@
      ]
   },
   {
-     "title":"Máte možnost flexibilní pracovní doby nebo práce z domova?",
+     "title":"Máte možnost flexibilní pracovní doby nebo práce z domova? (Možné vybrat dvě možnosti)",
      "options":[
         {
            "text":"Pracuji remote",

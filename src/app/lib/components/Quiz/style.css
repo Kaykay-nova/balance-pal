@@ -22,6 +22,7 @@
   text-decoration: none;
   border: none;
   font-size: 0.8rem;
+  text-transform: uppercase;
   background-color: #ffffff;
   box-shadow: -3px 10px 20px #babecc, -10px 10px 20px #ffffff;
   padding: 1rem;
@@ -145,5 +146,4 @@ input {
   .quiz__question {
     padding: 0.7rem;
 }
-
 }
