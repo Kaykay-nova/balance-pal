@@ -6,9 +6,10 @@
   justify-content: center;
   background: rgb(12, 167, 132);
   background: radial-gradient(circle, rgba(12, 167, 132, 1) 0%, rgba(15, 68, 56, 1) 100%);
-  padding: 2rem; 
+  padding: 2rem;
   height: 100vh;
 }
+
 .hero__text {
   text-align: center;
   padding: 2rem 0;
@@ -77,6 +78,7 @@
   background-color: #1B7C65;
   border-radius: 50%;
   padding: 3rem;
+  text-align: center;
 }
 
 .quiz__btn {
@@ -109,7 +111,7 @@
     height: 400px;
   }
 
-  h1{
+  h1 {
     font-size: 1.5rem;
   }
 
@@ -130,7 +132,7 @@
     border: none;
   }
 
-  .content{
+  .content {
     padding: 22%;
   }
 
@@ -139,7 +141,7 @@
     font-size: 1rem;
   }
 
-  .quiz{
+  .quiz {
     padding: 22%;
   }
 
@@ -151,8 +153,8 @@
     text-align: center;
     margin-bottom: 2rem;
   }
-  
-  .quiz__content  {
+
+  .quiz__content {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;

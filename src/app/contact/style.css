@@ -88,7 +88,7 @@
   margin: 3rem 0;
 }
 
-.contact-icons{
+.contact-icons {
   font-size: 2rem;
 }
 
@@ -102,6 +102,14 @@
   color: #ffb200;
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  color: #ffb200;
+}
+
 @media (max-width: 1200px) {
   .contact__container {
     padding: 0% 6%;
@@ -109,7 +117,7 @@
 
   .contact__main-content {
     padding: 12% 3% 8% 32%;
-}
+  }
 
   .contact__aside--panel {
     padding: 3rem;
@@ -181,15 +189,15 @@
     padding: 3rem;
   }
 
-  .contact-icons{
+  .contact-icons {
     display: flex;
     margin-left: 1rem;
     flex-wrap: nowrap;
   }
 
-  .contact-icons{
+  .contact-icons {
     font-size: 1rem;
   }
 
-  
+
 }

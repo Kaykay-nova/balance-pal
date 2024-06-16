@@ -1,11 +1,11 @@
 'use client';
 import '@/app/style.css';
-import './style.css'
+import './style.css';
 import { Quiz } from '@/app/lib/components/Quiz';
 import lottie from 'lottie-web';
 import { useEffect, useRef, useState } from 'react';
 
-export default function HomeContent({posts}) {
+export default function HomeContent({ posts }) {
   const [quizActive, setQuizActive] = useState(false);
   const animationContainerMain = useRef(null);
   const quizFirst = useRef(null);
@@ -23,7 +23,6 @@ export default function HomeContent({posts}) {
     return () => mainInstance.destroy();
   }, []);
 
-  
   useEffect(() => {
     const peopleInstance = lottie.loadAnimation({
       container: animationPeople.current,
@@ -35,7 +34,6 @@ export default function HomeContent({posts}) {
     return () => peopleInstance.destroy();
   }, []);
 
-  
   useEffect(() => {
     const quizInstance = lottie.loadAnimation({
       container: animationQuiz.current,
@@ -47,7 +45,6 @@ export default function HomeContent({posts}) {
     return () => quizInstance.destroy();
   }, []);
 
-  
   useEffect(() => {
     if (quizActive) {
       quizFirst.current.scrollIntoView({ behavior: 'smooth' });
@@ -77,20 +74,20 @@ export default function HomeContent({posts}) {
 
       <section className="content" id="scroll">
         <p className="content__paragraph">
-          "Určitě jste na internetu našli spoustu rad na téma “worklife
-          balance”, ale stále si s tím nevíte rady? Co můžete ve svém životě
-          změnit, abyste toho dosáhli? Někdy je těžké najít vlastní střed mezi
-          milionem informací.
+          Určitě jste na internetu našli spoustu rad na téma „worklife balance“,
+          ale stále si s tím nevíte rady? Co můžete ve svém životě změnit,
+          abyste toho dosáhli? Někdy je těžké najít vlastní střed mezi milionem
+          informací.
         </p>
 
         <div id="content__lottie-people" ref={animationPeople}></div>
 
         <p className="content__paragraph">
-          Naše webová stránka je navržena tak, aby vám poskytla praktické rady
-          a tipy, jak dosáhnout harmonie mezi pracovním zápřahem a osobním
+          Naše webová stránka je navržena tak, aby vám poskytla praktické rady a
+          tipy, jak dosáhnout harmonie mezi pracovním zápřahem a osobním
           štěstím. Ať už hledáte inspiraci, jak efektivněji plánovat svůj čas,
           nebo potřebujete poradit, jak si udržet zdravé hranice mezi prací a
-          domovem, BalancePal je zde pro vás!"
+          domovem, BalancePal je zde pro vás!
         </p>
       </section>
 
@@ -107,10 +104,10 @@ export default function HomeContent({posts}) {
           </p>
         </div>
         <p className="quiz__ready">Jste připraveni pustit se do toho?</p>
-        
-        <button className="quiz__btn" onClick={startQuiz}> 
-        Spustit kvíz</button>
 
+        <button className="quiz__btn" onClick={startQuiz}>
+          Spustit kvíz
+        </button>
       </section>
 
       {quizActive && <Quiz ref={quizFirst} onQuit={quitQuiz} posts={posts} />}

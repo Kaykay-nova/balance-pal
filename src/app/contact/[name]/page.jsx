@@ -9,8 +9,29 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const contacts = {
   kristyna: {
     title: 'Kristýna Konečná',
-    descriptionTitle: 'Programování mě baví, protože je to kreativní proces, kde z několika řádků kódu vznikají funkční a užitečné aplikace. Je to nekonečná cesta objevování a učení se, protože technologie se neustále vyvíjí. A nakonec, je to pocit uspokojení, když vidíte, že váš kód funguje a lidé ho používají.',
-    descriptionText: 'Z grafického designu jsem se přirozeně dostala k programování. Zajímala mě nejen vizuální stránka, ale i technické zázemí webových stránek. V předchozí práci jsem editovala obsah našeho webu, a tak jsem se poprvé setkala s HTML a CSS. To mě motivovalo k dalšímu vzdělávání. Chvíli jsem se učila samostudiem, ale cílený rekvalifikační kurz programování v jazyce Javascript mi dal potřebné základy. Nyní se účastním kurzu Digitální akademie u Czechitas, kde se zaměřuji na front-end vývoj s Reactem. Ačkoli je přede mnou ještě dlouhá cesta, už teď se těším z toho, co jsem se naučila a co všechno dokážu vytvořit.',
+    descriptionTitle:
+      'Programování mě baví, protože je to kreativní proces, kde z několika řádků kódu vznikají funkční a užitečné aplikace. Je to nekonečná cesta objevování a učení se, protože technologie se neustále vyvíjí. A nakonec, je to pocit uspokojení, když vidíte, že váš kód funguje a lidé ho používají.',
+    descriptionText: (
+      <>
+        Z grafického designu jsem se přirozeně dostala k programování. Zajímala
+        mě nejen vizuální stránka, ale i technické zázemí webových stránek. V
+        předchozí práci jsem editovala obsah našeho webu, a tak jsem se poprvé
+        setkala s HTML a CSS. To mě motivovalo k dalšímu vzdělávání. Chvíli jsem
+        se učila samostudiem, ale cílený rekvalifikační kurz programování v
+        jazyce Javascript mi dal potřebné základy. Nyní se účastním kurzu&nbsp;
+        {
+          <Link
+            href="https://www.czechitas.cz/kurzy/digitalni-akademie-web"
+            alt="Digitální akademie: WEB"
+          >
+            Digitální akademie
+          </Link>
+        }
+        &nbsp;u Czechitas, kde se zaměřuji na front-end vývoj s Reactem. Ačkoli
+        je přede mnou ještě dlouhá cesta, už teď se těším z toho, co jsem se
+        naučila a co všechno dokážu vytvořit.
+      </>
+    ),
     link: '/contact/patricie',
     github: 'https://github.com/Kaykay-nova',
     linkedin: 'https://linkedin.com/in/kristýna-konečná-590292290',
@@ -20,8 +41,52 @@ const contacts = {
     title: 'Patricie Vyhlídalová',
     descriptionTitle:
       'Předchozí práce mě naučily pečlivosti, trpělivosti a schopnosti pracovat na týmových i samostatných projektech.',
-    descriptionText:
-      'O obor IT se zajímám druhým rokem. Účastnila jsem se několika jednodenních a dvoudenních kurzů v rámci Czechitas, jako jsou Poznej Salesforce, Úvod do programování 1 a 2: Python, nebo Test it - testování v praxi. Na podzim roku 2023 jsem se rozhodla zaměřit na frontend, a proto jsem absolvovala semestrální kurz JavaScript 1, po kterém následovala Digitální Akademie: WEB, kterou jsem úspěšně dokončila v červnu 2024. I když vím, že to bude vyžadovat ještě spoustu času, chci se do budoucna zaměřit na full-stack vývoj.',
+    descriptionText: (
+      <>
+        O obor IT se zajímám druhým rokem. Účastnila jsem se několika
+        jednodenních a dvoudenních kurzů v rámci Czechitas, jako jsou Poznej
+        Salesforce,&nbsp;
+        {
+          <Link
+            href="https://www.czechitas.cz/kurzy/uvod-do-pythonu"
+            alt="Úvod do Pythonu"
+          >
+            Úvod do Pythonu
+          </Link>
+        }
+        &nbsp;nebo&nbsp;
+        {
+          <Link
+            href="https://www.czechitas.cz/kurzy/test-it-testovani-v-praxi"
+            alt="Test it - testování v praxi"
+          >
+            Test it - testování v praxi
+          </Link>
+        }
+        . Na podzim roku 2023 jsem se rozhodla zaměřit na frontend, a proto jsem
+        absolvovala semestrální kurz&nbsp;
+        {
+          <Link
+            href="https://www.czechitas.cz/kurzy/javascript-1-zaklady"
+            alt="JavaScript 1 - Základy"
+          >
+            JavaScript 1
+          </Link>
+        }
+        , po kterém následovala&nbsp;
+        {
+          <Link
+            href="https://www.czechitas.cz/kurzy/digitalni-akademie-web"
+            alt="Digitální akademie: WEB"
+          >
+            Digitální Akademie: WEB
+          </Link>
+        }
+        , kterou jsem úspěšně dokončila v červnu 2024. I když vím, že to bude
+        vyžadovat ještě spoustu času, chci se do budoucna zaměřit na full-stack
+        vývoj.
+      </>
+    ),
     link: '/contact/kristyna',
     github: 'https://github.com/Pattiev97',
     linkedin: 'https://linkedin.com/in/patricie-vyhlidalova',
@@ -45,10 +110,7 @@ const ContactDetail = () => {
         <aside className="contact__aside--panel">
           <Link href="/contact/kristyna" className="contact__person">
             <div className="contact__person--card">
-              <img
-                src="/img/profil_kristyna.jpg"
-                alt="Foto Kristýna"
-              />
+              <img src="/img/profil_kristyna.jpg" alt="Foto Kristýna" />
               <h3>Kristýna</h3>
             </div>
           </Link>
