@@ -53,13 +53,8 @@
   border-radius: 25px 25px;
   background-color: #ffb200;
   text-align: center;
-}
-
-.quiz__result-link > a {
-  cursor: pointer;
-  color: #2a2823;
   font-weight: 600;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .quiz__result-link:hover {
