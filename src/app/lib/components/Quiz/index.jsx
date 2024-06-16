@@ -1,6 +1,6 @@
 'use client'
 import { useState, forwardRef } from 'react';
-import questions from "./data.json" with { type: "json" };
+import questions from "./data.json";
 import { QuizResult } from '@/app/lib/components/QuizResult';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
