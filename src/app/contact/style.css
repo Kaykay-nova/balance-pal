@@ -29,6 +29,7 @@
 .contact__person--card {
   margin: 1rem;
   position: relative;
+  text-align: center;
 }
 
 .paty {

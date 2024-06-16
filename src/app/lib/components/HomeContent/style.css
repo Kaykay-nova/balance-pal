@@ -86,7 +86,7 @@
   padding: 15px 40px;
   border-radius: 30px;
   background-color: #FFB400;
-  border: none;
+  border: 2px solid transparent;
   text-transform: uppercase;
   font-weight: 800;
 }
@@ -96,6 +96,7 @@
   background-color: transparent;
   color: #FFB400;
   box-shadow: 0 0 10px 5px #FFB400;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 1740px) {

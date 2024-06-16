@@ -1,5 +1,5 @@
 'use client';
-import resultTexts from "./results.json";
+import resultTexts from "./results.json" with { type: "json" };
 import Link from 'next/link';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -1,6 +1,6 @@
 'use client'
 import { useState, forwardRef } from 'react';
-import questions from "./data.json";
+import questions from "./data.json" with { type: "json" };
 import { QuizResult } from '@/app/lib/components/QuizResult';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -78,7 +78,7 @@ export const Quiz = forwardRef(({ onQuit, posts }, ref) => {
               <FontAwesomeIcon
                 className="close__icon"
                 icon={faXmark}
-              /><span className="btn__text">{quizEnded ? 'Zavřít' : 'Ukončit'}</span>
+              /><span className="btn__text close__text">{quizEnded ? 'Zavřít' : 'Ukončit'}</span>
             </button>
           </div>
 

@@ -84,6 +84,7 @@ p {
 
 .post__buttons--btn:hover {
   box-shadow: 0 0 10px 5px #FFB400;
+  transition: all 0.2s ease;
 }
 
 @media (max-width: 647px) {
