@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { useState, forwardRef } from 'react';
 import questions from "./data.json" with { type: "json" };
 import { QuizResult } from '@/app/lib/components/QuizResult';
@@ -92,8 +92,9 @@ export const Quiz = forwardRef(({ onQuit, posts }, ref) => {
                     className={selectedOptions.includes(option) ? 'quiz__question selected__btn' : 'quiz__question'}
                   >
                     <input
-                      type={selectedOptions.includes(option) ? 'hidden' : 'radio'}
+                      type="checkbox"
                       name="quiz_option"
+                      className="hidden-input"
                       checked={selectedOptions.includes(option)}
                       onChange={() => handleChoice(option)}
                     />
