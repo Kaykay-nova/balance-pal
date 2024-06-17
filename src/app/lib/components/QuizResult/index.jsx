@@ -25,19 +25,15 @@ export const QuizResult = ({ onRestart, answers, posts }) => {
     const categories = ['happy', 'balance', 'workaholic', 'burnout'];
     const counts = categories.map(category => answers.filter(answer => answer === category).length);
     const maxCount = Math.max(...counts);
-    const mostChoosenCategory = categories[counts.indexOf(maxCount)];
+    const mostChosenCategory = categories[counts.indexOf(maxCount)];
 
-    return mostChoosenCategory;
+    return mostChosenCategory;
   };
 
   const result = resultTexts[calculateResult()];
   const resultPosts = posts.filter((post) => {
     return result.references.includes(post.slug);
   });
-
-  const openInNewTab = (url) => {
-    window.open(url, '_blank');
-  };
 
   return (
     <div className='quiz__body'>
@@ -47,7 +43,7 @@ export const QuizResult = ({ onRestart, answers, posts }) => {
       <ul className="quiz__result-links">
         {resultPosts.map((p) => {
           return (
-            <li className="quiz__result-link" key={p.slug} onClick={() => openInNewTab(`/blog/${p.slug}`)}>
+            <li className="quiz__result-link" key={p.slug} onClick={() => window.open(`/blog/${p.slug}`, '_blank')}>
               {p.data.title}
             </li>
           );
@@ -55,17 +51,11 @@ export const QuizResult = ({ onRestart, answers, posts }) => {
       </ul>
       <div className='quiz__result-btn'>
         <button type="button" onClick={onRestart} className="result-btn">
-          <FontAwesomeIcon
-            className="refresh__icon"
-            icon={faRotate}
-          />
+          <FontAwesomeIcon className="refresh__icon" icon={faRotate} />
           Znovu
         </button>
         <Link href="/blog" className="result-btn">Všechny články
-          <FontAwesomeIcon
-            className="refresh__icon"
-            icon={faAngleRight}
-          />
+          <FontAwesomeIcon className="refresh__icon" icon={faAngleRight} />
         </Link>
       </div>
     </div>

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState, forwardRef } from 'react';
 import questions from "./data.json" with { type: "json" };
 import { QuizResult } from '@/app/lib/components/QuizResult';
@@ -28,7 +28,7 @@ export const Quiz = forwardRef(({ onQuit, posts }, ref) => {
 
   const handleNext = () => {
     if (selectedOptions.length > 0) {
-      setAnswers([...answers, selectedOptions.map(opt => opt.category)]);
+      setAnswers([...answers, ...selectedOptions.map(opt => opt.category)]);
     }
     if (questionNumber === questions.length) {
       setQuizEnded(true);
