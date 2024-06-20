@@ -96,9 +96,7 @@ const contacts = {
             Digitální Akademie: WEB
           </Link>
         }
-        , kterou jsem úspěšně dokončila v červnu 2024. I když vím, že to bude
-        vyžadovat ještě spoustu času, chci se do budoucna zaměřit na full-stack
-        vývoj.
+        , kterou jsem úspěšně dokončila v červnu 2024. Možnost pracovat na reálných projektech v rámci Akademie mi poskytlo cenné zkušenosti a sebedůvěru pro další profesní růst. A i když vím, že to bude vyžadovat ještě spoustu času, chci se do budoucna zaměřit na full-stack vývoj.
       </>
     ),
     link: '/contact/kristyna',
